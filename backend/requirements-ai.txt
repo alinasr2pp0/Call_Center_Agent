@@ -1,0 +1,5 @@
+# Optional: local semantic search (Embeddings + Rerank). Install only if you set EMBEDDING_PROVIDER=local
+#   pip install -r backend/requirements-ai.txt
+# The first start downloads the models from Hugging Face (needs internet once), then they run offline.
+sentence-transformers>=3.0
+numpy>=1.26

@@ -1,0 +1,1051 @@
+ <!DOCTYPE html>
+<html lang="ar" dir="rtl" id="htmlRoot">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>لوحة التحكم - إدارة مركز الاتصال</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+<style>:root{--i-home:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='7' height='9' rx='1'/%3E%3Crect x='14' y='3' width='7' height='5' rx='1'/%3E%3Crect x='14' y='12' width='7' height='9' rx='1'/%3E%3Crect x='3' y='16' width='7' height='5' rx='1'/%3E%3C/svg%3E");--i-ticket:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z'/%3E%3Cpath d='M13 5v2M13 17v2M13 11v2'/%3E%3C/svg%3E");--i-book:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z'/%3E%3C/svg%3E");--i-smile:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01'/%3E%3C/svg%3E");--i-users:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='9' cy='7' r='4'/%3E%3Cpath d='M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8'/%3E%3C/svg%3E");--i-shield:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/%3E%3C/svg%3E");--i-logout:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9'/%3E%3C/svg%3E");--i-headset:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3'/%3E%3C/svg%3E");--i-send:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m22 2-7 20-4-9-9-4zM22 2 11 13'/%3E%3C/svg%3E");--i-check:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4 12 14.01l-3-3'/%3E%3C/svg%3E");--i-alert:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01'/%3E%3C/svg%3E");--i-clock:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 6v6l4 2'/%3E%3C/svg%3E");--i-user:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='12' cy='7' r='4'/%3E%3C/svg%3E");--i-lock:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='11' width='18' height='11' rx='2'/%3E%3Cpath d='M7 11V7a5 5 0 0 1 10 0v4'/%3E%3C/svg%3E");--i-globe:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20'/%3E%3C/svg%3E");}
+:root{--bg:#EEF3F2;--panel:#fff;--ink:#12302B;--muted:#6A7F7A;--line:#E1EAE8;--accent:#0E6B5C;--accent-2:#0A4F44;--accent-soft:#E3F1EE;--deep:#072F2A;--danger:#C0463F;--danger-soft:#FCEBEA;--warn:#B7791F;--warn-soft:#FFF4DD;--blue:#2F6FED;--blue-soft:#E8F0FE;--shadow:0 1px 2px rgba(7,47,42,.05),0 8px 24px -12px rgba(7,47,42,.14)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,Arial,sans-serif;font-size:14px;line-height:1.5}
+button,input,select,textarea{font-family:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.ico::before,.tab-btn::before{content:"";display:inline-block;width:18px;height:18px;flex-shrink:0;background:currentColor;-webkit-mask:var(--ic) center/contain no-repeat;mask:var(--ic) center/contain no-repeat}
+.brand{display:flex;align-items:center;gap:10px}
+.brand .logo{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,#17967F,#0A4F44);display:grid;place-items:center;color:#fff}
+.brand .logo::before{content:"";width:22px;height:22px;background:currentColor;-webkit-mask:var(--i-headset) center/contain no-repeat;mask:var(--i-headset) center/contain no-repeat}
+.brand b{display:block;font-size:16px;line-height:1.2}.brand small{font-size:11.5px;opacity:.7}
+.lang-btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:7px 13px;font-size:12.5px;font-weight:600;cursor:pointer;color:var(--ink)}
+.lang-btn::before{content:"";width:15px;height:15px;background:currentColor;-webkit-mask:var(--i-globe) center/contain no-repeat;mask:var(--i-globe) center/contain no-repeat}
+.lang-btn:hover{background:var(--accent-soft)}
+.error-text{color:var(--danger);font-size:12.5px;margin-top:8px;min-height:18px}
+.badge{display:inline-block;padding:3px 11px;border-radius:999px;font-size:11.5px;font-weight:600;background:#EDF1F0;color:var(--muted)}
+.badge.resolved_confirmed,.badge.resolved_by_rag,.badge.admin{background:var(--accent-soft);color:var(--accent)}
+.badge.escalated{background:var(--danger-soft);color:var(--danger)}
+.badge.superadmin{background:var(--warn-soft);color:#8A5A00}
+.login-art{position:relative;overflow:hidden;color:#fff;background:radial-gradient(120% 90% at 20% 0%,#14806D 0%,#0A4F44 45%,#04211D 100%);padding:44px;display:flex;flex-direction:column;justify-content:space-between}
+.login-art::after{content:"";position:absolute;inset-inline-end:-90px;bottom:-90px;width:340px;height:340px;border-radius:50%;border:50px solid rgba(255,255,255,.05)}
+.login-art h2{font-size:30px;line-height:1.35;margin:0 0 10px}.login-art p{margin:0;opacity:.75;max-width:330px}
+.login-art .brand .logo{background:rgba(255,255,255,.14)}
+.field{position:relative;margin-bottom:12px}
+.field input,.login-box input{width:100%;border:1px solid var(--line);border-radius:11px;padding:12px 14px;font-size:14px;background:#F8FBFA;transition:border-color .15s,box-shadow .15s}
+.field input{padding-inline-start:42px}
+.field::before{content:"";position:absolute;inset-inline-start:14px;top:50%;translate:0 -50%;width:18px;height:18px;background:var(--muted);-webkit-mask:var(--fi) center/contain no-repeat;mask:var(--fi) center/contain no-repeat}
+.field.u{--fi:var(--i-user)}.field.p{--fi:var(--i-lock)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent)!important;box-shadow:0 0 0 3px rgba(14,107,92,.15)}
+.btn-main,.login-box button:not(.secondary){width:100%;border:none;border-radius:11px;padding:12px;font-size:14.5px;font-weight:700;color:#fff;background:linear-gradient(180deg,#128572,#0E6B5C);cursor:pointer;box-shadow:0 6px 14px -6px rgba(14,107,92,.6)}
+.btn-main:hover,.login-box button:not(.secondary):hover{background:linear-gradient(180deg,#0E7A68,#0A5A4D)}
+.modal-overlay{position:fixed;inset:0;background:rgba(7,47,42,.5);backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:center;z-index:10;padding:20px}
+.modal{background:var(--panel);border-radius:18px;padding:26px;width:100%;max-height:85vh;overflow-y:auto;box-shadow:0 30px 60px -20px rgba(0,0,0,.4)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+#loginScreen{min-height:100vh;display:flex}
+#loginScreen .login-art{flex:1.05}
+.login-pane{flex:1;position:relative;display:flex;align-items:center;justify-content:center;padding:32px;background:var(--panel)}
+.login-pane .lang-btn{position:absolute;top:22px;inset-inline-end:22px}
+.login-box{width:100%;max-width:370px}
+.login-box h1{font-size:24px;margin:0 0 6px}.login-box .sub{color:var(--muted);margin:0 0 26px}
+#appScreen{display:none;min-height:100vh}
+.shell{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+.sidebar{background:linear-gradient(180deg,#0A3B34,#052622);color:#fff;padding:22px 14px;display:flex;flex-direction:column;gap:22px;position:sticky;top:0;height:100vh}
+.sidebar .brand{padding:0 8px}
+.tabs{display:flex;flex-direction:column;gap:4px;flex:1}
+.tab-btn{display:flex;align-items:center;gap:12px;width:100%;text-align:start;border:none;background:none;color:rgba(255,255,255,.72);padding:11px 14px;border-radius:11px;font-size:14px;cursor:pointer}
+.tab-btn:hover{background:rgba(255,255,255,.07);color:#fff}
+.tab-btn.active{background:linear-gradient(90deg,#17967F,#0E6B5C);color:#fff;font-weight:600;box-shadow:0 6px 14px -8px rgba(0,0,0,.6)}
+.tab-btn[data-tab=dashboard]{--ic:var(--i-home)}.tab-btn[data-tab=tickets]{--ic:var(--i-ticket)}.tab-btn[data-tab=kb]{--ic:var(--i-book)}.tab-btn[data-tab=personas]{--ic:var(--i-smile)}.tab-btn[data-tab=customers]{--ic:var(--i-users)}.tab-btn[data-tab=staff]{--ic:var(--i-shield)}
+.logout{display:flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,.16);background:none;color:rgba(255,255,255,.85);padding:10px 14px;border-radius:11px;cursor:pointer;font-size:13.5px}
+.logout::before{content:'';width:18px;height:18px;background:currentColor;-webkit-mask:var(--i-logout) center/contain no-repeat;mask:var(--i-logout) center/contain no-repeat}
+.logout:hover{background:rgba(255,255,255,.08)}
+.main{padding:26px 32px 40px;min-width:0}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px;gap:12px;flex-wrap:wrap}
+.topbar h1{font-size:24px;margin:0}
+.topbar .right{display:flex;align-items:center;gap:10px}
+.who{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:6px 14px 6px 8px;font-size:12.5px;display:inline-flex;align-items:center;gap:8px}
+.who::before{content:"";width:26px;height:26px;border-radius:50%;background:var(--accent-soft) var(--i-user) center/14px no-repeat}
+.mode-note{font-size:12.5px;color:var(--warn);background:var(--warn-soft);border-radius:10px;padding:0 12px;margin-bottom:16px}
+.mode-note:not(:empty){padding:8px 12px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:22px}
+.stat-card{position:relative;background:var(--panel);border-radius:16px;padding:18px 18px 16px;box-shadow:var(--shadow);border:1px solid var(--line);display:flex;flex-direction:column;gap:2px;padding-inline-end:70px}
+.stat-card::after{content:"";position:absolute;inset-inline-end:16px;top:16px;width:42px;height:42px;border-radius:12px;background:var(--c-bg,#E3F1EE)}
+.stat-card::before{content:"";position:absolute;inset-inline-end:27px;top:27px;width:20px;height:20px;z-index:1;background:var(--c,#0E6B5C);-webkit-mask:var(--ic) center/contain no-repeat;mask:var(--ic) center/contain no-repeat}
+.stat-card:nth-child(1){--ic:var(--i-ticket);--c:#2F6FED;--c-bg:#E8F0FE}.stat-card:nth-child(2){--ic:var(--i-check);--c:#0E6B5C;--c-bg:#E3F1EE}.stat-card:nth-child(3){--ic:var(--i-alert);--c:#C0463F;--c-bg:#FCEBEA}.stat-card:nth-child(4){--ic:var(--i-clock);--c:#D98A12;--c-bg:#FFF4DD}
+.stat-card .lbl{order:-1;font-size:12.5px;color:var(--muted)}.stat-card .num{font-size:28px;font-weight:700;line-height:1.2}
+.kpi-grid.auto{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}.kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:20px}
+.kpi-card,.dash-section{background:var(--panel);border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}
+.kpi-card{padding:18px;border-inline-start:4px solid var(--accent)}
+.kpi-card .kpi-value{font-size:26px;font-weight:700;color:var(--accent)}.kpi-card .kpi-value.muted{color:var(--muted);font-size:16px}
+.kpi-card .kpi-label{font-size:12.5px;color:var(--muted);margin-top:4px}
+.dash-section{padding:20px;margin-bottom:18px}.dash-section h3{font-size:15px;color:var(--ink);margin:0 0 14px}
+.bar-row{display:flex;align-items:center;gap:12px;margin-bottom:10px;font-size:13px}
+.bar-row .bar-label{width:140px;flex-shrink:0}.bar-row .bar-track{flex:1;background:#EDF3F2;border-radius:99px;height:10px;overflow:hidden}
+.bar-row .bar-fill{background:linear-gradient(90deg,#17967F,#0E6B5C);height:100%;border-radius:99px}.bar-row .bar-count{width:36px;text-align:end;font-weight:600}
+.latency-table-wrap{overflow-x:auto}.latency-table{min-width:700px}.latency-table td:first-child{font-weight:600}
+.tech-details{margin-top:6px}.tech-details summary{cursor:pointer;font-weight:600;font-size:13.5px;color:var(--accent);padding:10px 4px;list-style:none}.tech-details summary::-webkit-details-marker{display:none}.tech-details summary::before{content:"▸";display:inline-block;margin-inline-end:8px;transition:transform .15s}.tech-details[open] summary::before{transform:rotate(90deg)}
+.latency-note{color:var(--muted);font-size:12.5px;margin:0 0 12px;font-weight:500}
+table{width:100%;border-collapse:separate;border-spacing:0;background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:var(--shadow)}
+th,td{padding:13px 16px;text-align:right;font-size:13.5px;border-bottom:1px solid var(--line)}
+html[dir=ltr] th,html[dir=ltr] td{text-align:left}
+th{color:var(--muted);font-weight:600;background:#F6FAF9;font-size:12.5px}
+tr:last-child td{border-bottom:none}tr.clickable{cursor:pointer}tr.clickable:hover td{background:#F1F8F6}
+.kb-toolbar{display:flex;justify-content:flex-end;margin-bottom:14px}
+.kb-head{display:flex;align-items:center;justify-content:space-between;margin:0 0 12px}.kb-head h3{margin:0;font-size:15px}
+.kb-gap{margin-top:30px}.doc-hint{font-size:12.5px;color:var(--muted);line-height:1.7;margin:0 0 6px}
+.btn{background:linear-gradient(180deg,#128572,#0E6B5C);color:#fff;border:none;border-radius:10px;padding:9px 18px;font-size:13.5px;cursor:pointer;font-weight:600}
+.btn:hover{filter:brightness(1.07)}
+.btn.secondary{background:var(--panel);border:1px solid var(--line);color:var(--ink)}.btn.secondary:hover{background:var(--accent-soft)}
+.btn.danger{background:var(--danger)}
+.modal{max-width:580px}.modal h2{margin:0 0 16px;font-size:18px}
+.modal label{font-size:12.5px;color:var(--muted);display:block;margin:13px 0 5px;font-weight:600}
+.modal input,.modal textarea,.modal select{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font-size:13.5px;background:#F8FBFA}
+.modal textarea{min-height:68px;resize:vertical}
+.modal-actions{display:flex;gap:8px;margin-top:20px;justify-content:flex-end}
+.detail-section{margin-bottom:16px}.detail-section h3{font-size:13px;color:var(--muted);margin:0 0 8px}
+.msg-line{padding:8px 12px;border-radius:10px;background:#F2F6F5;margin-bottom:6px;font-size:13px}
+.msg-line.agent{background:var(--accent-soft)}.msg-line.system{background:var(--warn-soft);color:var(--warn)}
+@media(max-width:900px){#loginScreen .login-art{display:none}.shell{grid-template-columns:1fr}.sidebar{position:static;height:auto;gap:12px}.tabs{flex-direction:row;overflow-x:auto}.tab-btn{width:auto;white-space:nowrap}.stats{grid-template-columns:repeat(2,1fr)}.kpi-grid{grid-template-columns:1fr}.main{padding:18px 14px}.logout{align-self:flex-start}}
+</style>
+</head>
+<body>
+<div id="loginScreen">
+  <div class="login-art">
+    <div class="brand"><span class="logo"></span><div><b>Call Center Agent</b><small>Admin Dashboard</small></div></div>
+    <div><h2>مركز اتصال ذكي<br>بإدارة واحدة</h2><p>تابع التذاكر والعملاء وقاعدة المعرفة من لوحة تحكم واحدة.</p></div>
+    <small style="opacity:.55">© Call Center Agent</small>
+  </div>
+  <div class="login-pane">
+    <button class="lang-btn" id="langBtnLogin">EN</button>
+    <div class="login-box">
+      <h1 id="t_loginTitle">تسجيل دخول الموظفين</h1>
+      <p class="sub">Call Center Agent</p>
+      <div class="field u"><input id="loginUser" placeholder="اسم المستخدم"></div>
+      <div class="field p"><input id="loginPass" type="password" placeholder="كلمة المرور"></div>
+      <button id="loginBtn">دخول</button>
+      <div class="error-text" id="loginError"></div>
+    </div>
+  </div>
+</div>
+
+<div id="appScreen">
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="logo"></span><div><b>Call Center Agent</b><small>Admin</small></div></div>
+      <div class="tabs" id="tabsRow">
+        <button class="tab-btn active" data-tab="dashboard">لوحة القياسات</button>
+        <button class="tab-btn" data-tab="tickets">التذاكر والتصعيدات</button>
+        <button class="tab-btn" data-tab="kb">قاعدة المعرفة</button>
+        <button class="tab-btn" data-tab="personas">الشخصيات (الأسلوب)</button>
+        <button class="tab-btn" data-tab="customers">العملاء</button>
+        <button class="tab-btn" data-tab="staff" id="staffTabBtn" style="display:none">إدارة الموظفين</button>
+      </div>
+      <button class="logout" id="logoutBtn">تسجيل خروج</button>
+    </aside>
+    <main class="main">
+      <div class="topbar">
+        <h1 id="t_dashTitle">لوحة التحكم</h1>
+        <div class="right"><button class="btn danger" id="resetBtn" style="display:none"></button><span class="who" id="whoAmI"></span><button class="lang-btn" id="langBtnTop">EN</button></div>
+      </div>
+      <div class="mode-note" id="modeNote"></div>
+      <div class="stats" id="statsRow"></div>
+      <div id="dashboardTab"></div>
+      <div id="ticketsTab" style="display:none"></div>
+      <div id="kbTab" style="display:none"></div>
+      <div id="personasTab" style="display:none"></div>
+      <div id="customersTab" style="display:none"></div>
+      <div id="staffTab" style="display:none"></div>
+    </main>
+  </div>
+</div>
+
+<script>
+const API_BASE = "";
+const STRINGS = {
+  ar: {
+    loginTitle: "تسجيل دخول الموظفين", loginBtn: "دخول",
+    loginUsernamePh: "اسم المستخدم", loginPasswordPh: "كلمة المرور",
+    dashTitle: "لوحة التحكم", logout: "تسجيل خروج",
+    tabDashboard: "لوحة القياسات", tabTickets: "التذاكر والتصعيدات", tabKb: "قاعدة المعرفة", tabStaff: "إدارة الموظفين",
+    kpiFcr: "FCR Rate (تأكيد الحل من أول مكالمة)", kpiEscalation: "نسبة التصعيد",
+    kpiTextRes: "نسبة الحل النصي الأولي", kpiCallCompletion: "نسبة اكتمال المكالمة آليًا",
+    kpiAht: "متوسط مدة المكالمة", kpiReachability: "نسبة الرد من أول محاولة",
+    kpiWebSearch: "نسبة اللجوء لبحث الإنترنت", kpiPrecision: "Precision (الدقة)", kpiRecall: "Recall (الاستدعاء)", kpiFaithfulness: "Faithfulness (الأمانة للمصدر)", resetBtn: "Reset", confirmReset: "سيتم حذف كل البيانات المؤقتة (التذاكر والمحادثات والمكالمات والقياسات). قاعدة المعرفة والشخصيات والعملاء والموظفون لن تتأثر. متأكد؟", resetDone: "تم مسح البيانات المؤقتة", resetFail: "فشل الـ Reset — تحقق من الصلاحيات/الاتصال", kpiCategoryBreakdown: "توزيع التذاكر حسب التصنيف",
+    kpiKbCoverage: "عدد مقالات قاعدة المعرفة", kpiTotalTickets: "إجمالي التذاكر", kpiTotalCalls: "إجمالي المكالمات",
+    noData: "لا توجد بيانات كافية بعد", seconds: "ثانية",
+    perfHttp: "زمن الطلبات الكلي", perfFirstAnswer: "زمن أول إجابة",
+    perfStrategies: "زمن استراتيجيات الحل", perfProviders: "زمن الخدمات الخارجية",
+    perfRequests: "تفصيل زمن الطلبات", techDetails: "تفاصيل تقنية (للمطوّرين)", kpiReqLatency: "زمن الطلبات الكلي", kpiFirstAnswer: "زمن أول إجابة", perfAvg: "المتوسط", perfP50: "p50", perfP95: "p95", perfP99: "p99",
+    perfErrors: "أخطاء", perfCount: "عدد القياسات", perfSamples: "عينات بالنافذة",
+    perfCategory: "النوع", perfName: "العملية", perfWindowNote: "القياسات منذ تشغيل هذه النسخة؛ يحتفظ النظام بآخر 2000 عينة لكل مقياس.",
+    statTotal: "إجمالي التذاكر", statResolved: "تم الحل", statEscalated: "تم التصعيد", statOpen: "مفتوحة",
+    colTicket: "رقم التذكرة", colStatus: "الحالة", colCategory: "التصنيف", colAttempts: "عدد المحاولات", colOpened: "تاريخ الفتح",
+    noTickets: "لا توجد تذاكر بعد",
+    status: { open: "مفتوحة", resolved_by_rag: "حل أولي (نص)", resolved_confirmed: "تم التأكيد", escalated: "تم التصعيد" },
+    outcome: { resolved_confirmed: "تم تأكيد الحل ✓", escalated_to_agent: "تم تسجيل المشكلة لفريق الدعم", transferred_to_agent: "تم التحويل لموظف بشري" },
+    conversation: "المحادثة", calls: "المكالمات", escalations: "التصعيدات",
+    noCalls: "لا توجد مكالمات بعد", noEscalations: "لا يوجد تصعيد", close: "إغلاق",
+    newKb: "+ مشكلة جديدة", colId: "المعرف", colProduct: "المنتج", colType: "النوع", colSubject: "الموضوع",
+    colKbStatus: "الحالة", edit: "تعديل", delete: "حذف",
+    noKb: "لا توجد مقالات بعد", confirmDeleteKb: "متأكد من حذف المقالة دي؟",
+    formProduct: "المنتج", formTicketType: "نوع التذكرة", formSubject: "الموضوع",
+    formDescription: "وصف المشكلة", formResolution: "نص الحل (اتركه فارغًا إن لم يُحل بعد)",
+    formStatus: "الحالة", formPriority: "الأولوية", formChannel: "قناة التواصل",
+    cancel: "إلغاء", save: "حفظ", newKbTitle: "مشكلة جديدة", editKbTitle: "تعديل مشكلة",
+    saveFailKb: "فشل الحفظ — تحقق من الاتصال بالسيرفر", deleteFailKb: "فشل الحذف — تحقق من الاتصال بالسيرفر",
+    docsTitle: "المستندات", kbArticlesTitle: "المشكلات والحلول", uploadDoc: "+ رفع مستند", uploadDocTitle: "رفع مستند",
+    uploadDocHint: "ارفع ملف PDF أو DOCX أو TXT (حتى 10 ميجا). يُقسَّم تلقائيًا إلى مقاطع ويصبح البحث والرد متاحًا منه. الملفات الممسوحة ضوئيًا (صور) غير مدعومة.",
+    docFile: "الملف", docProduct: "المنتج أو الموضوع (اختياري)", docProductPh: "مثال: راوتر، فواتير…",
+    docChooseFile: "اختر ملفًا أولًا", upload: "رفع", uploading: "جارٍ الرفع…", uploadFail: "فشل الرفع — تحقق من الملف والاتصال بالسيرفر",
+    colDocName: "المستند", colDocType: "النوع", colChunks: "المقاطع", colSize: "الحجم", colDate: "التاريخ",
+    noDocs: "لا توجد مستندات بعد", confirmDeleteDoc: "حذف المستند وكل مقاطعه من قاعدة المعرفة؟", kpiDocuments: "عدد المستندات",
+    tabCustomers: "العملاء", colUsername: "اسم المستخدم", colPhone: "الموبايل", colTickets: "التذاكر", colActive: "الحالة",
+    active: "نشط", disabled: "معطّل", resetPassword: "إعادة تعيين كلمة المرور", disable: "تعطيل", enable: "تفعيل",
+    noCustomers: "لا يوجد عملاء بعد", promptNewPassword: "ادخل كلمة المرور الجديدة (6 أحرف على الأقل):",
+    passwordChanged: "تم تغيير كلمة المرور — بلّغ العميل بها", customerActionFail: "فشلت العملية — تحقق من الصلاحيات/الاتصال",
+    confirmDisable: "تعطيل هذا الحساب؟ مش هيقدر يدخل ولا يفتح مشاكل جديدة.",
+    confirmDeleteCustomer: "حذف العميل نهائيًا؟ لا يمكن التراجع عن هذا الإجراء.",
+    customerHasTickets: "لا يمكن حذف عميل لديه تذاكر. عطّل الحساب بدلًا من ذلك.",
+    customerDeleteFail: "فشل حذف العميل — تحقق من الصلاحيات/الاتصال",
+    tabPersonas: "الشخصيات (الأسلوب)", newPersona: "+ شخصية جديدة", colName: "الاسم", colDescription: "الوصف",
+    colDefault: "افتراضية", yes: "نعم", no: "لا",
+    noPersonas: "لا توجد شخصيات بعد", confirmDeletePersona: "متأكد من حذف الشخصية دي؟",
+    formName: "الاسم", formDescription: "وصف مختصر (يظهر للعميل)", formTone: "تعليمات الأسلوب (بالعربية، تُرسل للنموذج)",
+    formIsDefault: "اجعلها الشخصية الافتراضية",
+    newPersonaTitle: "شخصية جديدة", editPersonaTitle: "تعديل شخصية",
+    saveFailPersona: "فشل الحفظ — تحقق من الاتصال بالسيرفر", deleteFailPersona: "فشل الحذف — تحقق من الاتصال بالسيرفر",
+    cannotDeleteDefaultPersona: "لا يمكن حذف الشخصية الافتراضية — اجعل شخصية أخرى افتراضية أولًا",
+    newStaff: "+ موظف جديد", colUsername: "اسم المستخدم", colRole: "الصلاحية", colCreated: "تاريخ الإنشاء",
+    noStaff: "لا يوجد موظفين بعد", confirmDeleteStaff: "متأكد من حذف الموظف ده؟",
+    formUsername: "اسم المستخدم", formPassword: "كلمة المرور", formRole: "الصلاحية",
+    newStaffTitle: "موظف جديد", staffInvalid: "اسم المستخدم 3 أحرف على الأقل وكلمة المرور 6 أحرف على الأقل", staffExists: "اسم المستخدم مستخدم بالفعل", permAgent: "Agent: يرى التذاكر والتصعيدات ويعالجها، ويطّلع على قاعدة المعرفة (قراءة فقط).", permAdmin: "Admin: كل الأقسام (القياسات، التذاكر، المعرفة، الشخصيات، العملاء) وزر Reset، بدون إدارة الموظفين.", changeRole: "تغيير الصلاحية",
+    role: { superadmin: "Superadmin", admin: "Admin", agent: "Agent" },
+    demoNote: "⚠ لا يوجد اتصال بالسيرفر الحقيقي — البيانات المعروضة تجريبية (mock)",
+    badCreds: "بيانات الدخول غير صحيحة",
+  },
+  en: {
+    loginTitle: "Staff Login", loginBtn: "Log in",
+    loginUsernamePh: "Username", loginPasswordPh: "Password",
+    dashTitle: "Dashboard", logout: "Log out",
+    tabDashboard: "Dashboard", tabTickets: "Tickets & Escalations", tabKb: "Knowledge Base", tabStaff: "Staff Management",
+    kpiFcr: "FCR Rate (first-call confirmed)", kpiEscalation: "Escalation Rate",
+    kpiTextRes: "Initial Text-Resolution Rate", kpiCallCompletion: "Automated Call Completion",
+    kpiAht: "Average Handle Time", kpiReachability: "First-Try Reachability",
+    kpiWebSearch: "Web-Search Fallback Rate", kpiPrecision: "Precision", kpiRecall: "Recall", kpiFaithfulness: "Faithfulness", resetBtn: "Reset", confirmReset: "This deletes all temporary data (tickets, chats, calls, metrics). Knowledge base, personas, customers and staff are kept. Continue?", resetDone: "Temporary data cleared", resetFail: "Reset failed — check permissions/connection", kpiCategoryBreakdown: "Tickets by Category",
+    kpiKbCoverage: "KB Articles", kpiTotalTickets: "Total Tickets", kpiTotalCalls: "Total Calls",
+    noData: "Not enough data yet", seconds: "sec",
+    perfHttp: "Overall request latency", perfFirstAnswer: "Time to first answer",
+    perfStrategies: "Resolution strategy latency", perfProviders: "External service latency",
+    perfRequests: "Request latency details", techDetails: "Technical details (for developers)", kpiReqLatency: "Overall request time", kpiFirstAnswer: "Time to first answer", perfAvg: "Average", perfP50: "p50", perfP95: "p95", perfP99: "p99",
+    perfErrors: "Errors", perfCount: "Measurements", perfSamples: "Window samples",
+    perfCategory: "Type", perfName: "Operation", perfWindowNote: "Measurements since this process started; the latest 2,000 samples are retained per metric.",
+    statTotal: "Total Tickets", statResolved: "Resolved", statEscalated: "Escalated", statOpen: "Open",
+    colTicket: "Ticket", colStatus: "Status", colCategory: "Category", colAttempts: "Attempts", colOpened: "Opened",
+    noTickets: "No tickets yet",
+    status: { open: "Open", resolved_by_rag: "Initial answer", resolved_confirmed: "Confirmed", escalated: "Escalated" },
+    outcome: { resolved_confirmed: "Resolution confirmed ✓", escalated_to_agent: "Escalated to customer support", transferred_to_agent: "Transferred to an agent" },
+    conversation: "Conversation", calls: "Calls", escalations: "Escalations",
+    noCalls: "No calls yet", noEscalations: "No escalations", close: "Close",
+    newKb: "+ New Problem", colId: "ID", colProduct: "Product", colType: "Type", colSubject: "Subject",
+    colKbStatus: "Status", edit: "Edit", delete: "Delete",
+    noKb: "No articles yet", confirmDeleteKb: "Delete this article?",
+    formProduct: "Product", formTicketType: "Ticket type", formSubject: "Subject",
+    formDescription: "Problem description", formResolution: "Resolution text (leave empty if unresolved)",
+    formStatus: "Status", formPriority: "Priority", formChannel: "Channel",
+    cancel: "Cancel", save: "Save", newKbTitle: "New Problem", editKbTitle: "Edit Problem",
+    saveFailKb: "Save failed — check server connection", deleteFailKb: "Delete failed — check server connection",
+    docsTitle: "Documents", kbArticlesTitle: "Problems & solutions", uploadDoc: "+ Upload document", uploadDocTitle: "Upload a document",
+    uploadDocHint: "Upload a PDF, DOCX or TXT file (up to 10 MB). It is split into passages automatically and becomes searchable. Scanned (image-only) files are not supported.",
+    docFile: "File", docProduct: "Product or topic (optional)", docProductPh: "e.g. Router, Billing…",
+    docChooseFile: "Choose a file first", upload: "Upload", uploading: "Uploading…", uploadFail: "Upload failed — check the file and the server connection",
+    colDocName: "Document", colDocType: "Type", colChunks: "Passages", colSize: "Size", colDate: "Date",
+    noDocs: "No documents yet", confirmDeleteDoc: "Delete this document and all its passages from the knowledge base?", kpiDocuments: "Documents",
+    tabCustomers: "Customers", colUsername: "Username", colPhone: "Phone", colTickets: "Tickets", colActive: "Status",
+    active: "Active", disabled: "Disabled", resetPassword: "Reset password", disable: "Disable", enable: "Enable",
+    noCustomers: "No customers yet", promptNewPassword: "Enter the new password (min 6 characters):",
+    passwordChanged: "Password changed — tell the customer", customerActionFail: "Action failed — check permissions/connection",
+    confirmDisable: "Disable this account? They won't be able to log in or open new problems.",
+    confirmDeleteCustomer: "Permanently delete this customer? This cannot be undone.",
+    customerHasTickets: "Customers with tickets cannot be deleted. Disable the account instead.",
+    customerDeleteFail: "Customer deletion failed — check permissions/connection",
+    tabPersonas: "Personas (Tone)", newPersona: "+ New Persona", colName: "Name", colDescription: "Description",
+    colDefault: "Default", yes: "Yes", no: "No",
+    noPersonas: "No personas yet", confirmDeletePersona: "Delete this persona?",
+    formName: "Name", formDescription: "Short description (shown to the customer)", formTone: "Tone instructions (Arabic, sent to the model)",
+    formIsDefault: "Make this the default persona",
+    newPersonaTitle: "New Persona", editPersonaTitle: "Edit Persona",
+    saveFailPersona: "Save failed — check server connection", deleteFailPersona: "Delete failed — check server connection",
+    cannotDeleteDefaultPersona: "Can't delete the default persona — make another one default first",
+    newStaff: "+ New Staff", colUsername: "Username", colRole: "Role", colCreated: "Created",
+    noStaff: "No staff members yet", confirmDeleteStaff: "Delete this staff member?",
+    formUsername: "Username", formPassword: "Password", formRole: "Role",
+    newStaffTitle: "New Staff Member", staffInvalid: "Username: 3+ characters, password: 6+ characters", staffExists: "Username already exists", permAgent: "Agent: works on tickets/escalations and can view the knowledge base (read-only).", permAdmin: "Admin: all sections (metrics, tickets, knowledge base, personas, customers) and Reset, but no staff management.", changeRole: "Change Role",
+    role: { superadmin: "Superadmin", admin: "Admin", agent: "Agent" },
+    demoNote: "⚠ No live backend reachable — showing mock demo data",
+    badCreds: "Invalid credentials",
+    demoCustomerName: "Demo customer",
+    demoTicketCustomerMessage: "I was charged more than expected.",
+    demoTicketAgentMessage: "Check your bill details in the app.",
+  },
+};
+let lang = "ar";
+let dashboardRefreshTimer;
+function t(key) { return STRINGS[lang][key]; }
+
+// Escape anything that comes from the server/customers before putting it into innerHTML.
+function esc(v) {
+  return String(v ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+// GET/POST helper: returns parsed JSON, or null on any failure. An expired session sends the user to the login screen.
+async function api(path, opts = {}) {
+  try {
+    const res = await fetch(`${API_BASE}${path}`, { ...opts, headers: { ...authHeaders(), ...(opts.headers || {}) } });
+    if (res.status === 401) { doLogout(); return null; }
+    if (!res.ok) return null;
+    return await res.json();
+  } catch { return null; }
+}
+
+function applyStaticText() {
+  document.getElementById("htmlRoot").lang = lang;
+  document.getElementById("htmlRoot").dir = lang === "ar" ? "rtl" : "ltr";
+  document.title = lang === "ar" ? "لوحة التحكم - إدارة مركز الاتصال" : "Admin Dashboard - Call Center Management";
+  const flip = lang === "ar" ? "EN" : "AR";
+  document.getElementById("langBtnLogin").textContent = flip;
+  document.getElementById("langBtnTop").textContent = flip;
+  document.getElementById("t_loginTitle").textContent = t("loginTitle");
+  document.getElementById("loginUser").placeholder = t("loginUsernamePh");
+  document.getElementById("loginPass").placeholder = t("loginPasswordPh");
+  document.getElementById("loginBtn").textContent = t("loginBtn");
+  document.getElementById("t_dashTitle").textContent = t("dashTitle");
+  document.getElementById("logoutBtn").textContent = t("logout");
+  const tabs = document.querySelectorAll("#tabsRow .tab-btn");
+  tabs[0].textContent = t("tabDashboard");
+  tabs[1].textContent = t("tabTickets"); tabs[2].textContent = t("tabKb");
+  tabs[3].textContent = t("tabPersonas");
+  tabs[4].textContent = t("tabCustomers");
+  document.getElementById("staffTabBtn").textContent = t("tabStaff");
+  document.getElementById("resetBtn").textContent = t("resetBtn");
+}
+document.getElementById("langBtnLogin").addEventListener("click", () => { lang = lang === "ar" ? "en" : "ar"; applyStaticText(); });
+document.getElementById("langBtnTop").addEventListener("click", () => {
+  lang = lang === "ar" ? "en" : "ar"; applyStaticText();
+  if (username) document.getElementById("whoAmI").textContent = `${username} (${STRINGS[lang].role[role] || role})`;
+  if (!token) return;
+  loadStats(); if (can("tab:dashboard")) loadDashboard(); loadTickets(); loadKB(); if (role) { if (can("tab:personas")) loadPersonas(); if (can("tab:customers")) loadCustomers(); if (can("tab:staff")) loadStaff(); }
+});
+applyStaticText();
+
+// ---------------- Auth ----------------
+let token = null, role = null, username = null;
+const demoMode = false;   // لا وضع تجريبي ولا حسابات مدمجة: الدخول عبر /auth/login فقط
+
+// Role permissions (UI level). The backend must enforce the same rules on every endpoint.
+const PERMS = {
+  superadmin: { tabs: ["dashboard", "tickets", "kb", "personas", "customers", "staff"], kbEdit: true, reset: true },
+  admin:      { tabs: ["dashboard", "tickets", "kb", "personas", "customers"],          kbEdit: true, reset: true },
+  agent:      { tabs: ["tickets", "kb"],                                                kbEdit: false, reset: false },
+};
+function can(x) { const p = PERMS[role]; return !!p && (x.startsWith("tab:") ? p.tabs.includes(x.slice(4)) : !!p[x]); }
+
+document.getElementById("loginBtn").addEventListener("click", login);
+async function login() {
+  const u = document.getElementById("loginUser").value;
+  const p = document.getElementById("loginPass").value;
+  const errEl = document.getElementById("loginError");
+  errEl.textContent = "";
+
+  try {
+    const res = await fetch(`${API_BASE}/auth/login`, {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ username: u, password: p })
+    });
+    if (!res.ok) throw new Error("bad creds");
+    const data = await res.json();
+    token = data.access_token; role = data.role; username = data.username;
+  } catch {
+    errEl.textContent = t("badCreds");
+    return;
+  }
+  enterApp();
+}
+
+function doLogout() {
+  token = null; role = null; username = null;
+  clearInterval(dashboardRefreshTimer);
+  closeModal();
+  ["dashboardTab", "ticketsTab", "kbTab", "personasTab", "customersTab", "staffTab", "statsRow"].forEach(id => { document.getElementById(id).innerHTML = ""; });
+  document.getElementById("loginPass").value = "";
+  document.getElementById("appScreen").style.display = "none";
+  document.getElementById("loginScreen").style.display = "flex";
+}
+document.getElementById("logoutBtn").addEventListener("click", doLogout);
+["loginUser", "loginPass"].forEach(id => document.getElementById(id).addEventListener("keydown", e => { if (e.key === "Enter") login(); }));
+
+function authHeaders() { return { "Authorization": `Bearer ${token}` }; }
+
+function enterApp() {
+  document.getElementById("loginScreen").style.display = "none";
+  document.getElementById("appScreen").style.display = "block";
+  document.getElementById("whoAmI").textContent = `${username} (${STRINGS[lang].role[role] || role})`;
+  document.getElementById("modeNote").textContent = demoMode ? t("demoNote") : "";
+  document.querySelectorAll(".tab-btn").forEach(b => { b.style.display = can("tab:" + b.dataset.tab) ? "" : "none"; });
+  document.getElementById("resetBtn").style.display = can("reset") ? "inline-block" : "none";
+  document.getElementById("statsRow").style.display = can("tab:dashboard") ? "" : "none";
+  loadStats();
+  if (can("tab:dashboard")) loadDashboard();
+  loadTickets();
+  loadKB();
+  if (can("tab:personas")) loadPersonas();
+  if (can("tab:customers")) loadCustomers();
+  if (can("tab:staff")) loadStaff();
+  const firstTab = PERMS[role].tabs[0];
+  document.querySelector(`.tab-btn[data-tab="${firstTab}"]`).click();
+  clearInterval(dashboardRefreshTimer);
+  dashboardRefreshTimer = setInterval(() => {
+    if (!demoMode && can("tab:dashboard") && document.visibilityState === "visible") loadDashboard();
+  }, 15000);
+}
+
+// ---------------- Tabs ----------------
+document.querySelectorAll(".tab-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    const tab = btn.dataset.tab;
+    if (tab === "customers") loadCustomers();
+    document.getElementById("dashboardTab").style.display = tab === "dashboard" ? "block" : "none";
+    document.getElementById("ticketsTab").style.display = tab === "tickets" ? "block" : "none";
+    document.getElementById("kbTab").style.display = tab === "kb" ? "block" : "none";
+    document.getElementById("personasTab").style.display = tab === "personas" ? "block" : "none";
+    document.getElementById("customersTab").style.display = tab === "customers" ? "block" : "none";
+    document.getElementById("staffTab").style.display = tab === "staff" ? "block" : "none";
+  });
+});
+
+// ---------------- Demo data ----------------
+// لا بيانات تجريبية: عند فشل الطلب تظهر قوائم فارغة بدل أرقام مختلقة.
+const MOCK_STATS = { total: 0, resolved: 0, escalated: 0, open: 0 };
+const MOCK_METRICS = {};
+const MOCK_TICKETS = [], MOCK_KB = [], MOCK_PERSONAS = [], MOCK_STAFF = [];
+
+// ---------------- Stats ----------------
+async function loadStats() {
+  let s;
+  if (demoMode) { s = MOCK_STATS; }
+  else { s = (await api("/admin/stats")) || MOCK_STATS; }
+  document.getElementById("statsRow").innerHTML = `
+    <div class="stat-card"><div class="num">${s.total}</div><div class="lbl">${t("statTotal")}</div></div>
+    <div class="stat-card"><div class="num">${s.resolved}</div><div class="lbl">${t("statResolved")}</div></div>
+    <div class="stat-card"><div class="num">${s.escalated}</div><div class="lbl">${t("statEscalated")}</div></div>
+    <div class="stat-card"><div class="num">${s.open}</div><div class="lbl">${t("statOpen")}</div></div>
+  `;
+}
+
+// ---------------- Dashboard (KPIs) ----------------
+function fmtPct(v) { return v === null || v === undefined ? t("noData") : `${v.toFixed(1)}%`; }
+function fmtSeconds(v) { return v === null || v === undefined ? t("noData") : `${Math.round(v)} ${t("seconds")}`; }
+function fmtMs(v) { return v === null || v === undefined ? t("noData") : `<bdi dir="ltr">${v.toFixed(1)} ms</bdi>`; }
+
+const PERFORMANCE_LABELS = {
+  "http.request": "HTTP",
+  "chat.time_to_first_answer": "TTFA",
+  "strategy.kb_narrow": "KB (narrow)",
+  "strategy.kb_broad": "KB (broad)",
+  "strategy.sql": "SQL",
+  "strategy.web_search": "Tavily + synthesis",
+  "api.voyage.embeddings": "Voyage embeddings",
+  "api.openrouter.chat_completion": "OpenRouter",
+  "api.qdrant.query": "Qdrant query",
+  "api.qdrant.upsert": "Qdrant upsert",
+  "api.qdrant.delete": "Qdrant delete",
+  "api.tavily.search": "Tavily search",
+  "voice.stt": "STT محلي (Whisper)",
+  "voice.tts": "TTS محلي (KemeTone)",
+  "voice.agent": "الـ Agent (صوت)",
+  "voice.e2e_first_audio": "أول صوت للمتصل (من نهاية كلامه)",
+  "voice.e2e_text_ready": "نص الرد جاهز (من نهاية كلامه)",
+  "agent.route": "التوجيه",
+  "agent.sql": "SQL",
+  "agent.web": "Tavily المقيّد",
+  "api.vonage.create_call": "Vonage create call",
+};
+
+function renderLatencyTable(entries) {
+  if (!entries.length) return `<div style="color:var(--muted);font-size:12.5px">${t("noData")}</div>`;
+  const rows = entries.sort(([left], [right]) => left.localeCompare(right)).map(([name, metric]) => `
+    <tr>
+      <td>${esc(PERFORMANCE_LABELS[name] || name)}</td>
+      <td>${metric.count}</td><td>${metric.samples}</td><td>${fmtMs(metric.avg_ms)}</td>
+      <td>${fmtMs(metric.p50_ms)}</td><td>${fmtMs(metric.p95_ms)}</td><td>${fmtMs(metric.p99_ms)}</td><td>${metric.errors}</td>
+    </tr>`).join("");
+  return `<div class="latency-table-wrap"><table class="latency-table">
+    <thead><tr><th>${t("perfName")}</th><th>${t("perfCount")}</th><th>${t("perfSamples")}</th><th>${t("perfAvg")}</th>
+    <th>${t("perfP50")}</th><th>${t("perfP95")}</th><th>${t("perfP99")}</th><th>${t("perfErrors")}</th></tr></thead>
+    <tbody>${rows}</tbody></table></div>`;
+}
+
+async function loadDashboard() {
+  let m;
+  if (demoMode) { m = MOCK_METRICS; }
+  else { m = (await api("/admin/metrics")) || MOCK_METRICS; }
+  renderDashboard(m);
+}
+
+function renderDashboard(m) {
+  m = { kb_article_count: 0, document_count: 0, total_calls: 0, category_breakdown: [], performance: {}, ...m };
+  const performance = m.performance || {};
+  const kpis = [
+    [t("kpiFcr"), fmtPct(m.fcr_rate)],
+    [t("kpiEscalation"), fmtPct(m.escalation_rate)],
+    [t("kpiTextRes"), fmtPct(m.text_resolution_rate)],
+    [t("kpiCallCompletion"), fmtPct(m.call_completion_rate)],
+    [t("kpiAht"), fmtSeconds(m.avg_handle_time_seconds)],
+    [t("kpiReachability"), fmtPct(m.call_reachability_rate)],
+    [t("kpiWebSearch"), fmtPct(m.web_search_fallback_rate)],
+    [t("kpiPrecision"), fmtPct(m.precision)],
+    [t("kpiRecall"), fmtPct(m.recall)],
+    [t("kpiFaithfulness"), fmtPct(m.faithfulness)],
+    [t("kpiKbCoverage"), m.kb_article_count],
+    [t("kpiDocuments"), m.document_count],
+    [t("kpiTotalCalls"), m.total_calls],
+  ];
+  const latKpis = [];
+  [[t("kpiFirstAnswer"), performance["chat.time_to_first_answer"]], [t("kpiReqLatency"), performance["http.request"]]].forEach(([label, metric]) => {
+    if (!metric) return;
+    [50, 95].forEach(pc => { if (metric[`p${pc}_ms`] != null) latKpis.push([`${label} · p${pc}`, fmtMs(metric[`p${pc}_ms`])]); });
+  });
+  const kpiHtml = list => list.map(([label, value]) => `
+    <div class="kpi-card">
+      <div class="kpi-value ${value === t("noData") ? "muted" : ""}">${value}</div>
+      <div class="kpi-label">${label}</div>
+    </div>`).join("");
+  const kpiCards = kpiHtml(kpis);
+
+  const maxCount = Math.max(1, ...m.category_breakdown.map(c => c.count));
+  const bars = m.category_breakdown.length
+    ? m.category_breakdown.map(c => `
+        <div class="bar-row">
+          <div class="bar-label">${esc(c.category)}</div>
+          <div class="bar-track"><div class="bar-fill" style="width:${(c.count / maxCount * 100).toFixed(0)}%"></div></div>
+          <div class="bar-count">${c.count}</div>
+        </div>`).join("")
+    : `<div style="color:var(--muted);font-size:12.5px">${t("noData")}</div>`;
+
+  const requestLatency = performance["http.request"];
+  const firstAnswer = performance["chat.time_to_first_answer"];
+  const entries = Object.entries(performance);
+  const requestEntries = entries.filter(([name]) => name.startsWith("http."));
+  const strategyEntries = entries.filter(([name]) => name.startsWith("strategy."));
+  const providerEntries = entries.filter(([name]) => name.startsWith("api."));
+  const section = (title, list) => list.length ? `<div class="dash-section">${title ? `<h3>${title}</h3>` : ""}${renderLatencyTable(list)}</div>` : "";
+  const techBody = section(t("perfRequests"), requestEntries) + section(t("perfStrategies"), strategyEntries) + section(t("perfProviders"), providerEntries);
+  const tech = techBody ? `<details class="tech-details"><summary>${t("techDetails")}</summary>${techBody}<div class="latency-note">${t("perfWindowNote")}</div></details>` : "";
+
+  document.getElementById("dashboardTab").innerHTML = `
+    <div class="kpi-grid">${kpiCards}</div>
+    ${latKpis.length ? `<div class="kpi-grid auto">${kpiHtml(latKpis)}</div>` : ""}
+    <div class="dash-section">
+      <h3>${t("kpiCategoryBreakdown")}</h3>
+      ${bars}
+    </div>
+    ${tech}
+  `;
+}
+
+
+// ---------------- Tickets ----------------
+async function loadTickets() {
+  let tickets;
+  if (demoMode) { tickets = MOCK_TICKETS; }
+  else { tickets = (await api("/admin/tickets")) || MOCK_TICKETS; }
+
+  const rows = tickets.map(tk => `
+    <tr class="clickable" onclick="openTicket('${esc(tk.id)}')">
+      <td>${esc(tk.id.slice(0, 8))}</td>
+      <td><span class="badge ${esc(tk.status)}">${esc(t("status")[tk.status] || tk.status)}</span></td>
+      <td>${esc(tk.category || "-")}</td>
+      <td>${esc(tk.resolution_attempts)}</td>
+      <td>${new Date(tk.opened_at).toLocaleString(lang === "ar" ? "ar-EG" : "en-US")}</td>
+    </tr>`).join("");
+
+  document.getElementById("ticketsTab").innerHTML = `
+    <table>
+      <thead><tr><th>${t("colTicket")}</th><th>${t("colStatus")}</th><th>${t("colCategory")}</th><th>${t("colAttempts")}</th><th>${t("colOpened")}</th></tr></thead>
+      <tbody>${rows || `<tr><td colspan="5">${t("noTickets")}</td></tr>`}</tbody>
+    </table>`;
+}
+
+async function openTicket(id) {
+  let detail;
+  if (demoMode) {
+    detail = {
+      ticket: MOCK_TICKETS.find(tk => tk.id === id),
+      messages: [
+        { sender: "customer", content: lang === "ar" ? "اتخصم مني فلوس زيادة" : t("demoTicketCustomerMessage") },
+        { sender: "agent", content: lang === "ar" ? "راجع تفاصيل الفاتورة من التطبيق." : t("demoTicketAgentMessage") },
+        { sender: "system", content: t("outcome").resolved_confirmed },
+      ],
+      calls: [{ status: "completed", outcome: "resolved_confirmed", duration_seconds: 42 }],
+      escalations: [],
+    };
+  } else {
+    detail = await api(`/admin/tickets/${encodeURIComponent(id)}`);
+    if (!detail) return;
+  }
+
+  const msgs = detail.messages.map(m => `<div class="msg-line ${m.sender === "agent" ? "agent" : m.sender === "system" ? "system" : ""}">${m.sender === "customer" ? "🙋" : m.sender === "system" ? "📩" : "🤖"} ${esc(m.content)}</div>`).join("");
+  const calls = detail.calls.map(c => `<div class="msg-line">📞 ${esc(c.status)} — ${esc(t("outcome")[c.outcome] || c.outcome || "—")} (${esc(c.duration_seconds || 0)}s)</div>`).join("") || t("noCalls");
+  const escs = detail.escalations.map(e => `<div class="msg-line">⚠ ${esc(e.reason)}</div>`).join("") || t("noEscalations");
+
+  showModal(`
+    <h2>${esc(id.slice(0, 8))}</h2>
+    <div class="detail-section"><h3>${t("conversation")}</h3>${msgs}</div>
+    <div class="detail-section"><h3>${t("calls")}</h3>${calls}</div>
+    <div class="detail-section"><h3>${t("escalations")}</h3>${escs}</div>
+    <div class="modal-actions"><button class="btn secondary" onclick="closeModal()">${t("close")}</button></div>
+  `);
+}
+
+// ---------------- KB management ----------------
+let kbCache = [], docsCache = [];
+
+async function loadKB() {
+  const [articles, docs] = await Promise.all([api("/admin/kb"), api("/admin/documents")]);
+  kbCache = articles || [];
+  docsCache = docs || [];
+  renderKB();
+}
+
+function fmtSize(bytes) {
+  return bytes >= 1048576 ? `${(bytes / 1048576).toFixed(1)} MB` : `${Math.max(1, Math.round(bytes / 1024))} KB`;
+}
+
+function renderKB() {
+  const docRows = docsCache.map(d => `
+    <tr>
+      <td>${esc(d.title)}</td><td>${esc(d.file_type).toUpperCase()}</td><td>${esc(d.product)}</td>
+      <td>${esc(d.chunk_count)}</td><td><bdi dir="ltr">${fmtSize(d.size_bytes)}</bdi></td>
+      <td>${new Date(d.created_at).toLocaleDateString(lang === "ar" ? "ar-EG" : "en-US")}</td>
+      <td>${can("kbEdit") ? `<button class="btn danger" data-id="${esc(d.id)}" onclick="deleteDoc(this.dataset.id)">${t("delete")}</button>` : ""}</td>
+    </tr>`).join("");
+
+  const rows = kbCache.map(a => `
+    <tr>
+      <td>${esc(a.id)}</td><td>${esc(a.product)}</td><td>${esc(a.ticket_type)}</td><td>${esc(a.subject)}</td>
+      <td><span class="badge ${a.status === "Closed" ? "resolved_confirmed" : "open"}">${esc(a.status)}</span></td>
+      <td>
+        ${can("kbEdit") ? `<button class="btn secondary" onclick="editKB(${a.id})">${t("edit")}</button>
+        <button class="btn danger" onclick="deleteKB(${a.id})">${t("delete")}</button>` : ""}
+      </td>
+    </tr>`).join("");
+
+  document.getElementById("kbTab").innerHTML = `
+    <div class="kb-head"><h3>${t("docsTitle")}</h3>
+      ${can("kbEdit") ? `<button class="btn" onclick="showDocForm()">${t("uploadDoc")}</button>` : ""}</div>
+    <table>
+      <thead><tr><th>${t("colDocName")}</th><th>${t("colDocType")}</th><th>${t("colProduct")}</th><th>${t("colChunks")}</th><th>${t("colSize")}</th><th>${t("colDate")}</th><th></th></tr></thead>
+      <tbody>${docRows || `<tr><td colspan="7">${t("noDocs")}</td></tr>`}</tbody>
+    </table>
+    <div class="kb-head kb-gap"><h3>${t("kbArticlesTitle")}</h3>
+      ${can("kbEdit") ? `<button class="btn" onclick="newKB()">${t("newKb")}</button>` : ""}</div>
+    <table>
+      <thead><tr><th>${t("colId")}</th><th>${t("colProduct")}</th><th>${t("colType")}</th><th>${t("colSubject")}</th><th>${t("colKbStatus")}</th><th></th></tr></thead>
+      <tbody>${rows || `<tr><td colspan="6">${t("noKb")}</td></tr>`}</tbody>
+    </table>`;
+}
+
+function newKB() { showKBForm(null); }
+function editKB(id) { showKBForm(kbCache.find(a => a.id === Number(id))); }
+
+function showKBForm(article) {
+  const a = article || { product: "", ticket_type: "", subject: "", description: "", resolution: "",
+                         status: "Open", priority: "Medium", channel: "Phone" };
+  showModal(`
+    <h2>${article ? t("editKbTitle") : t("newKbTitle")}</h2>
+    <label>${t("formProduct")}</label><input id="f_product" value="${esc(a.product)}">
+    <label>${t("formTicketType")}</label><input id="f_ticket_type" value="${esc(a.ticket_type)}">
+    <label>${t("formSubject")}</label><input id="f_subject" value="${esc(a.subject)}">
+    <label>${t("formDescription")}</label><textarea id="f_description">${esc(a.description || "")}</textarea>
+    <label>${t("formResolution")}</label><textarea id="f_resolution">${esc(a.resolution || "")}</textarea>
+    <label>${t("formStatus")}</label>
+    <select id="f_status">${["Open", "Pending Customer Response", "Closed"].map(v =>
+      `<option value="${v}" ${a.status === v ? "selected" : ""}>${v}</option>`).join("")}</select>
+    <label>${t("formPriority")}</label>
+    <select id="f_priority">${["Low", "Medium", "High", "Critical"].map(v =>
+      `<option value="${v}" ${a.priority === v ? "selected" : ""}>${v}</option>`).join("")}</select>
+    <label>${t("formChannel")}</label>
+    <select id="f_channel">${["Phone", "Email", "Chat", "Social media"].map(v =>
+      `<option value="${v}" ${a.channel === v ? "selected" : ""}>${v}</option>`).join("")}</select>
+    <div class="modal-actions">
+      <button class="btn secondary" onclick="closeModal()">${t("cancel")}</button>
+      <button class="btn" onclick="saveKB(${article ? article.id : "null"})">${t("save")}</button>
+    </div>
+  `);
+}
+
+async function saveKB(id) {
+  const body = {
+    product: document.getElementById("f_product").value,
+    ticket_type: document.getElementById("f_ticket_type").value,
+    subject: document.getElementById("f_subject").value,
+    description: document.getElementById("f_description").value,
+    resolution: document.getElementById("f_resolution").value || null,
+    status: document.getElementById("f_status").value,
+    priority: document.getElementById("f_priority").value,
+    channel: document.getElementById("f_channel").value,
+  };
+
+  if (demoMode) {
+    if (id) { Object.assign(kbCache.find(a => a.id === id), body); }
+    else { kbCache.push({ id: Math.max(0, ...kbCache.map(a => a.id)) + 1, ...body }); }
+    closeModal(); renderKB(); return;
+  }
+
+  try {
+    const res = await fetch(`${API_BASE}/admin/kb${id ? "/" + id : ""}`, {
+      method: id ? "PUT" : "POST",
+      headers: { "Content-Type": "application/json", ...authHeaders() },
+      body: JSON.stringify(body),
+    });
+    if (!res.ok) { const err = await res.json().catch(() => ({})); alert((typeof err.detail === "string" && err.detail) || t("saveFailKb")); return; }
+    closeModal(); loadKB();
+  } catch { alert(t("saveFailKb")); }
+}
+
+async function deleteKB(id) {
+  if (!confirm(t("confirmDeleteKb"))) return;
+  if (demoMode) { kbCache = kbCache.filter(a => a.id !== id); renderKB(); return; }
+  try {
+    const res = await fetch(`${API_BASE}/admin/kb/${id}`, { method: "DELETE", headers: authHeaders() });
+    if (!res.ok) { const err = await res.json().catch(() => ({})); alert(typeof err.detail === "string" ? err.detail : t("deleteFailKb")); return; }
+    loadKB();
+  } catch { alert(t("deleteFailKb")); }
+}
+
+// ---------------- Documents: upload / delete ----------------
+const MAX_DOC_BYTES = 10 * 1024 * 1024;   // same limit as the server
+
+function showDocForm() {
+  showModal(`
+    <h2>${t("uploadDocTitle")}</h2>
+    <p class="doc-hint">${t("uploadDocHint")}</p>
+    <label>${t("docFile")}</label><input id="f_doc_file" type="file" accept=".pdf,.docx,.txt,.md">
+    <label>${t("docProduct")}</label><input id="f_doc_product" maxlength="200" placeholder="${esc(t("docProductPh"))}">
+    <div class="error-text" id="docError"></div>
+    <div class="modal-actions">
+      <button class="btn secondary" onclick="closeModal()">${t("cancel")}</button>
+      <button class="btn" id="docUploadBtn" onclick="uploadDoc()">${t("upload")}</button>
+    </div>
+  `);
+}
+
+async function uploadDoc() {
+  const file = document.getElementById("f_doc_file").files[0];
+  const errEl = document.getElementById("docError");
+  const btn = document.getElementById("docUploadBtn");
+  errEl.textContent = "";
+  if (!file) { errEl.textContent = t("docChooseFile"); return; }
+  if (file.size > MAX_DOC_BYTES) { errEl.textContent = t("uploadFail"); return; }
+  const form = new FormData();
+  form.append("file", file);
+  form.append("product", document.getElementById("f_doc_product").value);
+  btn.disabled = true; btn.textContent = t("uploading");
+  try {
+    const res = await fetch(`${API_BASE}/admin/documents`, { method: "POST", headers: authHeaders(), body: form });
+    if (res.status === 401) { doLogout(); return; }
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      errEl.textContent = typeof err.detail === "string" ? err.detail : t("uploadFail");
+      btn.disabled = false; btn.textContent = t("upload");
+      return;
+    }
+    closeModal(); loadKB();
+  } catch {
+    errEl.textContent = t("uploadFail");
+    btn.disabled = false; btn.textContent = t("upload");
+  }
+}
+
+async function deleteDoc(id) {
+  if (!confirm(t("confirmDeleteDoc"))) return;
+  try {
+    const res = await fetch(`${API_BASE}/admin/documents/${id}`, { method: "DELETE", headers: authHeaders() });
+    if (!res.ok) { const err = await res.json().catch(() => ({})); alert(typeof err.detail === "string" ? err.detail : t("deleteFailKb")); return; }
+    loadKB();
+  } catch { alert(t("deleteFailKb")); }
+}
+
+
+// ---------------- Customer accounts ----------------
+let customersCache = [];
+const MOCK_CUSTOMERS = [];
+
+async function loadCustomers() {
+  if (demoMode) { customersCache = MOCK_CUSTOMERS; }
+  else { customersCache = (await api("/admin/customers")) || MOCK_CUSTOMERS; }
+  renderCustomers();
+}
+
+function renderCustomers() {
+  const rows = customersCache.map(c => `
+    <tr>
+      <td>${esc(c.username)}</td><td>${esc(demoMode && c.id === "c1" && lang === "en" ? t("demoCustomerName") : c.name || "-")}</td><td>${esc(c.phone)}</td><td>${esc(c.ticket_count)}</td>
+      <td>${c.is_active ? t("active") : t("disabled")}</td>
+      <td>
+        <button class="btn secondary" onclick="resetCustomerPassword('${esc(c.id)}')">${t("resetPassword")}</button>
+        <button class="btn ${c.is_active ? "danger" : ""}" onclick="toggleCustomer('${esc(c.id)}', ${!c.is_active})">${c.is_active ? t("disable") : t("enable")}</button>
+        <button class="btn danger" onclick="deleteCustomer('${esc(c.id)}')">${t("delete")}</button>
+      </td>
+    </tr>`).join("");
+  document.getElementById("customersTab").innerHTML = `
+    <table>
+      <thead><tr><th>${t("colUsername")}</th><th>${t("colName")}</th><th>${t("colPhone")}</th><th>${t("colTickets")}</th><th>${t("colActive")}</th><th></th></tr></thead>
+      <tbody>${rows || `<tr><td colspan="6">${t("noCustomers")}</td></tr>`}</tbody>
+    </table>`;
+}
+
+async function customerRequest(id, suffix, body) {
+  if (demoMode) return true;
+  try {
+    const res = await fetch(`${API_BASE}/admin/customers/${id}/${suffix}`, {
+      method: "PUT", headers: { "Content-Type": "application/json", ...authHeaders() }, body: JSON.stringify(body),
+    });
+    if (!res.ok) { const err = await res.json().catch(() => ({})); alert((typeof err.detail === "string" && err.detail) || t("customerActionFail")); return false; }
+    return true;
+  } catch { alert(t("customerActionFail")); return false; }
+}
+
+async function resetCustomerPassword(id) {
+  const pw = prompt(t("promptNewPassword"));
+  if (!pw) return;
+  if (await customerRequest(id, "password", { new_password: pw })) alert(t("passwordChanged"));
+}
+
+async function toggleCustomer(id, makeActive) {
+  if (!makeActive && !confirm(t("confirmDisable"))) return;
+  if (await customerRequest(id, "active", { is_active: makeActive })) {
+    if (demoMode) customersCache.find(c => c.id === id).is_active = makeActive;
+    loadCustomers();
+  }
+}
+
+async function deleteCustomer(id) {
+  if (!confirm(t("confirmDeleteCustomer"))) return;
+  if (demoMode) {
+    customersCache = customersCache.filter(c => c.id !== id);
+    renderCustomers();
+    return;
+  }
+  try {
+    const res = await fetch(`${API_BASE}/admin/customers/${id}`, { method: "DELETE", headers: authHeaders() });
+    if (!res.ok) {
+      const err = await res.json().catch(() => ({}));
+      alert(res.status === 409 ? t("customerHasTickets") : err.detail || t("customerDeleteFail"));
+      return;
+    }
+    loadCustomers();
+  } catch { alert(t("customerDeleteFail")); }
+}
+
+// ---------------- Reset temporary data ----------------
+async function resetTempData() {
+  if (!confirm(t("confirmReset"))) return;
+  if (demoMode) {
+    MOCK_TICKETS.length = 0;
+    Object.assign(MOCK_STATS, { total: 0, resolved: 0, escalated: 0, open: 0 });
+    Object.assign(MOCK_METRICS, { fcr_rate: null, escalation_rate: null, text_resolution_rate: null, call_completion_rate: null, avg_handle_time_seconds: null, call_reachability_rate: null, web_search_fallback_rate: null, precision: null, recall: null, faithfulness: null, total_tickets: 0, total_calls: 0, category_breakdown: [], performance: {} });
+  } else {
+    try {
+      const res = await fetch(`${API_BASE}/admin/reset`, { method: "POST", headers: authHeaders() });
+      if (!res.ok) { const err = await res.json().catch(() => ({})); alert((typeof err.detail === "string" && err.detail) || t("resetFail")); return; }
+    } catch { alert(t("resetFail")); return; }
+  }
+  loadStats(); loadDashboard(); loadTickets();
+  alert(t("resetDone"));
+}
+document.getElementById("resetBtn").addEventListener("click", resetTempData);
+
+// ---------------- Persona management ----------------
+let personasCache = [];
+
+async function loadPersonas() {
+  if (demoMode) { personasCache = MOCK_PERSONAS; }
+  else { personasCache = (await api("/admin/personas")) || MOCK_PERSONAS; }
+  renderPersonas();
+}
+
+function renderPersonas() {
+  const rows = personasCache.map(p => `
+    <tr>
+      <td>${esc(p.name)}${p.role ? " — " + esc(p.role) : ""}</td>
+      <td>${esc(p.description || "-")}</td>
+      <td>${p.is_default ? t("yes") : t("no")}</td>
+      <td>
+        <button class="btn secondary" onclick="editPersona('${esc(p.id)}')">${t("edit")}</button>
+
+      </td>
+    </tr>`).join("");
+
+  document.getElementById("personasTab").innerHTML = `
+    <div class="kb-toolbar"></div>
+    <table>
+      <thead><tr><th>${t("colName")}</th><th>${t("colDescription")}</th><th>${t("colDefault")}</th><th></th></tr></thead>
+      <tbody>${rows || `<tr><td colspan="4">${t("noPersonas")}</td></tr>`}</tbody>
+    </table>`;
+}
+
+function editPersona(id) { showPersonaForm(personasCache.find(p => p.id === id)); }
+
+function showPersonaForm(p) {
+  if (!p) return;   // الشخصيات الأربع ثابتة: تعديل فقط (لا إنشاء)
+  showModal(`
+    <h2>${t("editPersonaTitle")}</h2>
+    <label>${t("formName")}</label><input id="f_p_name" value="${esc(p.name)}">
+    <label>Role</label><input id="f_p_role" value="${esc(p.role || "")}">
+    <label>${t("formDescription")}</label><input id="f_p_description" value="${esc(p.description || "")}">
+    <label>${t("formTone")}</label><textarea id="f_p_tone">${esc(p.tone_instructions_ar || "")}</textarea>
+    <label style="display:flex;align-items:center;gap:6px;margin-top:12px">
+      <input type="checkbox" id="f_p_default" style="width:auto" ${p.is_default ? "checked" : ""}> ${t("formIsDefault")}
+    </label>
+    <div class="modal-actions">
+      <button class="btn secondary" onclick="closeModal()">${t("cancel")}</button>
+      <button class="btn" onclick="savePersona('${esc(p.id)}')">${t("save")}</button>
+    </div>
+  `);
+}
+
+async function savePersona(id) {
+  // verbosity / max_words غير مُرسلة عمدًا: السيرفر يحتفظ بقيمها الحالية
+  const body = {
+    name: document.getElementById("f_p_name").value,
+    role: document.getElementById("f_p_role").value || null,
+    description: document.getElementById("f_p_description").value || null,
+    tone_instructions_ar: document.getElementById("f_p_tone").value,
+    is_default: document.getElementById("f_p_default").checked,
+  };
+  try {
+    const res = await fetch(`${API_BASE}/admin/personas/${id}`, {
+      method: "PUT", headers: { "Content-Type": "application/json", ...authHeaders() }, body: JSON.stringify(body),
+    });
+    if (!res.ok) { const err = await res.json().catch(() => ({})); alert((typeof err.detail === "string" && err.detail) || t("saveFailPersona")); return; }
+    closeModal(); loadPersonas();
+  } catch { alert(t("saveFailPersona")); }
+}
+
+// ---------------- Staff management (superadmin only) ----------------
+let staffCache = [];
+
+async function loadStaff() {
+  if (demoMode) { staffCache = MOCK_STAFF; }
+  else { staffCache = (await api("/staff")) || MOCK_STAFF; }
+  renderStaff();
+}
+
+function renderStaff() {
+  const rows = staffCache.map(s => `
+    <tr>
+      <td>${esc(s.username)}</td>
+      <td><span class="badge ${esc(s.role)}">${esc(t("role")[s.role] || s.role)}</span></td>
+      <td>${new Date(s.created_at).toLocaleDateString(lang === "ar" ? "ar-EG" : "en-US")}</td>
+      <td>${s.role === "superadmin" ? "—" : `
+        <button class="btn secondary" onclick="changeStaffRole('${esc(s.id)}')">${t("changeRole")}</button>
+        <button class="btn danger" onclick="deleteStaff('${esc(s.id)}')">${t("delete")}</button>`}
+      </td>
+    </tr>`).join("");
+
+  document.getElementById("staffTab").innerHTML = `
+    <div class="kb-toolbar"><button class="btn" onclick="newStaff()">${t("newStaff")}</button></div>
+    <table>
+      <thead><tr><th>${t("colUsername")}</th><th>${t("colRole")}</th><th>${t("colCreated")}</th><th></th></tr></thead>
+      <tbody>${rows || `<tr><td colspan="4">${t("noStaff")}</td></tr>`}</tbody>
+    </table>`;
+}
+
+function newStaff() {
+  showModal(`
+    <h2>${t("newStaffTitle")}</h2>
+    <label>${t("formUsername")}</label><input id="f_username">
+    <label>${t("formPassword")}</label><input id="f_password" type="password">
+    <label>${t("formRole")}</label>
+    <select id="f_role" onchange="document.getElementById('permHint').textContent = t(this.value === 'admin' ? 'permAdmin' : 'permAgent')"><option value="agent">Agent</option><option value="admin">Admin</option></select>
+    <div id="permHint" style="font-size:12.5px;color:var(--muted);margin-top:8px">${t("permAgent")}</div>
+    <div class="modal-actions">
+      <button class="btn secondary" onclick="closeModal()">${t("cancel")}</button>
+      <button class="btn" onclick="saveNewStaff()">${t("save")}</button>
+    </div>
+  `);
+}
+
+async function saveNewStaff() {
+  const body = {
+    username: document.getElementById("f_username").value,
+    password: document.getElementById("f_password").value,
+    role: document.getElementById("f_role").value,
+  };
+  body.username = body.username.trim();
+  if (body.username.length < 3 || body.password.length < 6) { alert(t("staffInvalid")); return; }
+  if (staffCache.some(x => x.username.toLowerCase() === body.username.toLowerCase())) { alert(t("staffExists")); return; }
+  if (demoMode) {
+    staffCache.push({ id: "s" + Math.random().toString(36).slice(2, 6), created_at: new Date().toISOString(), ...body });
+    closeModal(); renderStaff(); return;
+  }
+  try {
+    const res = await fetch(`${API_BASE}/staff`, { method: "POST", headers: { "Content-Type": "application/json", ...authHeaders() }, body: JSON.stringify(body) });
+    if (!res.ok) { const err = await res.json().catch(() => ({})); alert(typeof err.detail === "string" ? err.detail : t("saveFailKb")); return; }
+    closeModal(); loadStaff();
+  } catch { alert(t("saveFailKb")); }
+}
+
+function changeStaffRole(id) {
+  const s = staffCache.find(x => x.id === id);
+  showModal(`
+    <h2>${t("changeRole")} — ${esc(s.username)}</h2>
+    <label>${t("formRole")}</label>
+    <select id="f_new_role">
+      <option value="agent" ${s.role === "agent" ? "selected" : ""}>Agent</option>
+      <option value="admin" ${s.role === "admin" ? "selected" : ""}>Admin</option>
+    </select>
+    <div class="modal-actions">
+      <button class="btn secondary" onclick="closeModal()">${t("cancel")}</button>
+      <button class="btn" onclick="saveStaffRole('${esc(id)}')">${t("save")}</button>
+    </div>
+  `);
+}
+
+async function saveStaffRole(id) {
+  const newRole = document.getElementById("f_new_role").value;
+  if (demoMode) {
+    staffCache.find(s => s.id === id).role = newRole;
+    closeModal(); renderStaff(); return;
+  }
+  try {
+    const res = await fetch(`${API_BASE}/staff/${id}/role`, { method: "PUT", headers: { "Content-Type": "application/json", ...authHeaders() }, body: JSON.stringify({ role: newRole }) });
+    if (!res.ok) { const err = await res.json().catch(() => ({})); alert(typeof err.detail === "string" ? err.detail : t("saveFailKb")); return; }
+    closeModal(); loadStaff();
+  } catch { alert(t("saveFailKb")); }
+}
+
+async function deleteStaff(id) {
+  if (!confirm(t("confirmDeleteStaff"))) return;
+  if (demoMode) { staffCache = staffCache.filter(s => s.id !== id); renderStaff(); return; }
+  try {
+    const res = await fetch(`${API_BASE}/staff/${id}`, { method: "DELETE", headers: authHeaders() });
+    if (!res.ok) { const err = await res.json().catch(() => ({})); alert(typeof err.detail === "string" ? err.detail : t("deleteFailKb")); return; }
+    loadStaff();
+  } catch { alert(t("deleteFailKb")); }
+}
+
+// ---------------- Modal helper ----------------
+function showModal(html) {
+  closeModal();
+  const overlay = document.createElement("div");
+  overlay.className = "modal-overlay"; overlay.id = "modalOverlay";
+  overlay.innerHTML = `<div class="modal">${html}</div>`;
+  overlay.addEventListener("click", e => { if (e.target === overlay) closeModal(); });
+  document.body.appendChild(overlay);
+}
+function closeModal() { document.getElementById("modalOverlay")?.remove(); }
+</script>
+</body>
+</html>

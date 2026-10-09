@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="htmlRoot">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>بوابة العميل</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+<style>:root{--i-phone:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z'/%3E%3C/svg%3E");--i-home:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='7' height='9' rx='1'/%3E%3Crect x='14' y='3' width='7' height='5' rx='1'/%3E%3Crect x='14' y='12' width='7' height='9' rx='1'/%3E%3Crect x='3' y='16' width='7' height='5' rx='1'/%3E%3C/svg%3E");--i-ticket:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z'/%3E%3Cpath d='M13 5v2M13 17v2M13 11v2'/%3E%3C/svg%3E");--i-book:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z'/%3E%3C/svg%3E");--i-smile:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01'/%3E%3C/svg%3E");--i-users:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='9' cy='7' r='4'/%3E%3Cpath d='M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8'/%3E%3C/svg%3E");--i-shield:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z'/%3E%3C/svg%3E");--i-logout:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9'/%3E%3C/svg%3E");--i-headset:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3'/%3E%3C/svg%3E");--i-send:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m22 2-7 20-4-9-9-4zM22 2 11 13'/%3E%3C/svg%3E");--i-check:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4 12 14.01l-3-3'/%3E%3C/svg%3E");--i-alert:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0zM12 9v4M12 17h.01'/%3E%3C/svg%3E");--i-clock:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M12 6v6l4 2'/%3E%3C/svg%3E");--i-user:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2'/%3E%3Ccircle cx='12' cy='7' r='4'/%3E%3C/svg%3E");--i-lock:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='11' width='18' height='11' rx='2'/%3E%3Cpath d='M7 11V7a5 5 0 0 1 10 0v4'/%3E%3C/svg%3E");--i-globe:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpath d='M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20'/%3E%3C/svg%3E");}
+:root{--bg:#EEF3F2;--panel:#fff;--ink:#12302B;--muted:#6A7F7A;--line:#E1EAE8;--accent:#0E6B5C;--accent-2:#0A4F44;--accent-soft:#E3F1EE;--deep:#072F2A;--danger:#C0463F;--danger-soft:#FCEBEA;--warn:#B7791F;--warn-soft:#FFF4DD;--blue:#2F6FED;--blue-soft:#E8F0FE;--shadow:0 1px 2px rgba(7,47,42,.05),0 8px 24px -12px rgba(7,47,42,.14)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,Arial,sans-serif;font-size:14px;line-height:1.5}
+button,input,select,textarea{font-family:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.ico::before,.tab-btn::before{content:"";display:inline-block;width:18px;height:18px;flex-shrink:0;background:currentColor;-webkit-mask:var(--ic) center/contain no-repeat;mask:var(--ic) center/contain no-repeat}
+.brand{display:flex;align-items:center;gap:10px}
+.brand .logo{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,#17967F,#0A4F44);display:grid;place-items:center;color:#fff}
+.brand .logo::before{content:"";width:22px;height:22px;background:currentColor;-webkit-mask:var(--i-headset) center/contain no-repeat;mask:var(--i-headset) center/contain no-repeat}
+.brand b{display:block;font-size:16px;line-height:1.2}.brand small{font-size:11.5px;opacity:.7}
+.lang-btn{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--panel);border-radius:10px;padding:7px 13px;font-size:12.5px;font-weight:600;cursor:pointer;color:var(--ink)}
+.lang-btn::before{content:"";width:15px;height:15px;background:currentColor;-webkit-mask:var(--i-globe) center/contain no-repeat;mask:var(--i-globe) center/contain no-repeat}
+.lang-btn:hover{background:var(--accent-soft)}
+.error-text{color:var(--danger);font-size:12.5px;margin-top:8px;min-height:18px}
+.badge{display:inline-block;padding:3px 11px;border-radius:999px;font-size:11.5px;font-weight:600;background:#EDF1F0;color:var(--muted)}
+.badge.resolved_confirmed,.badge.resolved_by_rag,.badge.admin{background:var(--accent-soft);color:var(--accent)}
+.badge.escalated{background:var(--danger-soft);color:var(--danger)}
+.badge.superadmin{background:var(--warn-soft);color:#8A5A00}
+.login-art{position:relative;overflow:hidden;color:#fff;background:radial-gradient(120% 90% at 20% 0%,#14806D 0%,#0A4F44 45%,#04211D 100%);padding:44px;display:flex;flex-direction:column;justify-content:space-between}
+.login-art::after{content:"";position:absolute;inset-inline-end:-90px;bottom:-90px;width:340px;height:340px;border-radius:50%;border:50px solid rgba(255,255,255,.05)}
+.login-art h2{font-size:30px;line-height:1.35;margin:0 0 10px}.login-art p{margin:0;opacity:.75;max-width:330px}
+.login-art .brand .logo{background:rgba(255,255,255,.14)}
+.field{position:relative;margin-bottom:12px}
+.field input,.login-box input{width:100%;border:1px solid var(--line);border-radius:11px;padding:12px 14px;font-size:14px;background:#F8FBFA;transition:border-color .15s,box-shadow .15s}
+.field input{padding-inline-start:42px}
+.field::before{content:"";position:absolute;inset-inline-start:14px;top:50%;translate:0 -50%;width:18px;height:18px;background:var(--muted);-webkit-mask:var(--fi) center/contain no-repeat;mask:var(--fi) center/contain no-repeat}
+.field.t{--fi:var(--i-phone)}.field.u{--fi:var(--i-user)}.field.p{--fi:var(--i-lock)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--accent)!important;box-shadow:0 0 0 3px rgba(14,107,92,.15)}
+.btn-main,.login-box button:not(.secondary){width:100%;border:none;border-radius:11px;padding:12px;font-size:14.5px;font-weight:700;color:#fff;background:linear-gradient(180deg,#128572,#0E6B5C);cursor:pointer;box-shadow:0 6px 14px -6px rgba(14,107,92,.6)}
+.btn-main:hover,.login-box button:not(.secondary):hover{background:linear-gradient(180deg,#0E7A68,#0A5A4D)}
+.modal-overlay{position:fixed;inset:0;background:rgba(7,47,42,.5);backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:center;z-index:10;padding:20px}
+.modal{background:var(--panel);border-radius:18px;padding:26px;width:100%;max-height:85vh;overflow-y:auto;box-shadow:0 30px 60px -20px rgba(0,0,0,.4)}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+body{padding:28px 16px;display:flex;justify-content:center;min-height:100vh}
+.app{width:100%;max-width:1000px;display:flex;flex-direction:column;gap:16px}
+header{display:flex;justify-content:space-between;align-items:center}
+header h1{font-size:19px;margin:0;line-height:1.2}header p{margin:2px 0 0;color:var(--muted);font-size:12.5px}
+.brand .logo{color:#fff}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}
+#loginScreen{display:grid;grid-template-columns:1fr 1fr;min-height:560px}
+.login-box{padding:44px 40px;display:flex;flex-direction:column;justify-content:center}
+.login-box h2{font-size:24px;margin:0 0 6px}.login-box p.hint{color:var(--muted);margin:0 0 24px}
+.login-box input{margin-bottom:12px}.login-box .field input{margin-bottom:0}
+.login-box button.secondary{width:100%;margin-top:10px;background:none;border:1px solid var(--line);color:var(--accent);padding:11px;border-radius:11px;font-weight:600;cursor:pointer}
+.login-box button.secondary:hover{background:var(--accent-soft)}
+.mode-note{font-size:12px;color:var(--warn);background:var(--warn-soft);border-radius:10px;padding:8px 12px;margin:8px 0 0}
+.shell{display:grid;grid-template-columns:220px 1fr;min-height:600px}
+.side{background:linear-gradient(180deg,#0A3B34,#052622);padding:18px 12px;color:#fff}
+.tabs{display:flex;flex-direction:column;gap:4px}
+.tab-btn{display:flex;align-items:center;gap:12px;width:100%;text-align:start;border:none;background:none;color:rgba(255,255,255,.72);padding:11px 14px;border-radius:11px;font-size:14px;cursor:pointer}
+.tab-btn:hover{background:rgba(255,255,255,.07);color:#fff}
+.tab-btn.active{background:linear-gradient(90deg,#17967F,#0E6B5C);color:#fff;font-weight:600}
+.tab-btn[data-tab=chat]{--ic:var(--i-headset)}.tab-btn[data-tab=tickets]{--ic:var(--i-ticket)}
+.content{min-width:0;display:flex;flex-direction:column}
+#chatTab{display:flex;flex-direction:column;flex:1}
+.status-bar{padding:12px 20px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--muted);min-height:48px;flex-wrap:wrap}
+.pill{padding:3px 11px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:600}
+.persona-row{display:flex;align-items:center;gap:8px;padding:12px 20px 0;font-size:12.5px;color:var(--muted)}
+.persona-row select{border:1px solid var(--line);border-radius:9px;padding:6px 10px;font-size:12.5px;background:#F8FBFA;color:var(--ink)}
+.messages{flex:1;min-height:300px;max-height:52vh;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:12px;background:#F8FBFA;margin-top:12px}
+.msg{max-width:74%;padding:11px 15px;border-radius:16px;font-size:14.5px;line-height:1.6;box-shadow:0 1px 2px rgba(7,47,42,.06)}
+.msg.customer{align-self:flex-end;background:linear-gradient(180deg,#128572,#0E6B5C);color:#fff;border-bottom-left-radius:4px}
+.msg.agent{align-self:flex-start;background:#fff;border:1px solid var(--line);border-bottom-right-radius:4px}
+.msg.system{align-self:center;background:var(--warn-soft);color:var(--warn);font-size:12.5px;padding:6px 14px;border-radius:99px;box-shadow:none}
+.composer{display:flex;gap:10px;padding:14px 16px;border-top:1px solid var(--line);align-items:center}
+.composer input{flex:1;border:1px solid var(--line);border-radius:99px;padding:12px 18px;font-size:14.5px;background:#F8FBFA}
+.composer #send{display:inline-flex;align-items:center;gap:8px;border:none;background:linear-gradient(180deg,#128572,#0E6B5C);color:#fff;padding:0 22px;height:44px;border-radius:99px;font-weight:700;cursor:pointer;box-shadow:0 6px 14px -6px rgba(14,107,92,.6)}
+.composer #send::before{content:"";width:16px;height:16px;background:currentColor;-webkit-mask:var(--i-send) center/contain no-repeat;mask:var(--i-send) center/contain no-repeat}
+html[dir=rtl] .composer #send::before{transform:scaleX(-1)}
+.composer button:disabled{opacity:.5;cursor:default}
+#micBtn{border:1px solid var(--line);background:var(--accent-soft);border-radius:50%;width:44px;height:44px;font-size:17px;cursor:pointer;flex-shrink:0}
+#micBtn.recording{background:var(--danger-soft);border-color:var(--danger);animation:pulse 1s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.55}}
+.mic-status{padding:0 20px 10px;font-size:12px;color:var(--muted);min-height:14px}
+.play-btn{border:none;background:none;cursor:pointer;font-size:13px;margin-inline-start:6px;opacity:.8}.play-btn:hover{opacity:1}
+.ticket-list{padding:20px;display:flex;flex-direction:column;gap:12px}
+.ticket-row{border:1px solid var(--line);border-radius:14px;padding:14px 16px;cursor:pointer;background:#fff;box-shadow:var(--shadow);transition:border-color .15s}
+.ticket-row:hover{border-color:var(--accent);background:#F6FBFA}
+.ticket-row .top{display:flex;justify-content:space-between;align-items:center;font-size:14px;font-weight:600}
+.ticket-row .date{color:var(--muted);font-size:12px;margin-top:5px}
+.empty-note{padding:40px;text-align:center;color:var(--muted)}
+.modal{max-width:500px;padding:24px}.modal h3{margin:0 0 6px;font-size:16px}
+.modal .close-btn{float:left;background:#fff;border:1px solid var(--line);border-radius:9px;padding:5px 13px;cursor:pointer;font-size:12px}
+.modal .call-outcome{margin-top:14px;padding:12px 14px;border-radius:12px;background:var(--accent-soft);font-size:13px}
+.modal .call-outcome.escalated{background:var(--danger-soft)}
+@media(max-width:780px){#loginScreen{grid-template-columns:1fr}#loginScreen .login-art{display:none}.login-box{padding:32px 22px}.shell{grid-template-columns:1fr}.tabs{flex-direction:row}.side{padding:10px}.msg{max-width:90%}}
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div class="brand"><span class="logo"></span><div>
+      <h1 id="t_title">بوابة العميل</h1>
+      <p id="t_subtitle">سجّل دخولك لمتابعة مشاكلك</p>
+    </div></div>
+    <button class="lang-btn" id="langBtn">EN</button>
+  </header>
+
+  <!-- Login screen -->
+  <div class="panel" id="loginScreen">
+    <div class="login-art">
+      <div class="brand"><span class="logo"></span><div><b>Call Center Agent</b><small>بوابة العميل</small></div></div>
+      <div><h2>نحن هنا<br>لحل مشكلتك</h2><p>اكتب مشكلتك أو سجّلها صوتيًا وتابع تذاكرك لحظة بلحظة.</p></div>
+      <small style="opacity:.55">© Call Center Agent</small>
+    </div>
+    <div class="login-box">
+      <h2 id="t_loginTitle">تسجيل الدخول</h2>
+      <p class="hint" id="t_loginHint">ادخل باسم المستخدم وكلمة المرور</p>
+
+      <div id="loginForm">
+        <div class="field u"><input id="loginUsername" autocomplete="off"></div>
+        <div class="field p"><input id="loginPassword" type="password" autocomplete="new-password"></div>
+        <button id="loginBtn">دخول</button>
+        <button class="secondary" id="showSignupBtn">حساب جديد</button>
+      </div>
+
+      <div id="signupForm" style="display:none">
+        <div class="field u"><input id="signupUsername" autocomplete="username"></div>
+        <div class="field p"><input id="signupPassword" type="password" autocomplete="new-password"></div>
+        <input id="signupName" type="hidden">
+        <div class="field t"><input id="signupPhone" type="tel"></div>
+        <button id="signupBtn">إنشاء حساب</button>
+        <button class="secondary" id="showLoginBtn">عندي حساب بالفعل</button>
+      </div>
+
+      <div class="error-text" id="loginError"></div>
+      <p class="mode-note" id="modeNote" style="display:none"></p>
+    </div>
+  </div>
+
+  <!-- Main app -->
+  <div class="panel" id="appScreen" style="display:none">
+    <div class="shell"><aside class="side"><div class="tabs">
+      <button class="tab-btn active" data-tab="chat" id="t_tabChat">مشكلة جديدة</button>
+      <button class="tab-btn" data-tab="tickets" id="t_tabTickets">تذاكري</button>
+    </div></aside>
+    <div class="content">
+
+    <div id="chatTab">
+      <div class="status-bar" id="statusBar"></div>
+      <div class="persona-row">
+        <label id="t_personaLabel" for="personaSelect">الأسلوب</label>
+        <select id="personaSelect"></select>
+      </div>
+      <div class="messages" id="messages"></div>
+      <div class="composer">
+        <button id="micBtn" type="button" title="تسجيل صوتي">🎤</button>
+        <input id="input" placeholder="اكتب مشكلتك هنا..." autocomplete="off">
+        <button id="send">إرسال</button>
+      </div>
+      <div class="mic-status" id="micStatus"></div>
+    </div>
+
+    <div id="ticketsTab" style="display:none">
+      <div class="ticket-list" id="ticketList"></div>
+    </div>
+    </div></div>
+  </div>
+</div>
+
+<script>
+const API_BASE = "";
+const STRINGS = {
+  ar: {
+    title: "بوابة العميل", subtitle: "سجّل دخولك لمتابعة مشاكلك",
+    loginTitle: "تسجيل الدخول", signupTitle: "إنشاء حساب", signupHint: "أنشئ حسابك لتتابع مشاكلك وتذاكرك", loginHint: "ادخل باسم المستخدم وكلمة المرور",
+    login: "دخول", signup: "إنشاء حساب", showSignup: "حساب جديد", showLogin: "عندي حساب بالفعل",
+    usernamePh: "اسم المستخدم", passwordPh: "كلمة المرور", namePh: "الاسم (اختياري)",
+    phonePh: "رقم الموبايل (للمكالمة) مثال: 201000000000",
+    badCreds: "بيانات دخول غير صحيحة", usernameTaken: "اسم المستخدم مستخدم بالفعل",
+    fillAll: "من فضلك املأ اسم المستخدم وكلمة المرور" ,
+    fillSignup: "اسم المستخدم وكلمة المرور ورقم الموبايل مطلوبين",
+    passwordTooShort: "كلمة المرور يجب أن تكون 8 أحرف على الأقل",
+    passwordTooLong: "كلمة المرور يجب ألا تزيد على 128 حرفًا",
+    usernameTooShort: "اسم المستخدم يجب أن يكون 3 أحرف على الأقل",
+    invalidInput: "راجع البيانات المدخلة وحاول مرة أخرى",
+    tabChat: "مشكلة جديدة", tabTickets: "تذاكري",
+    inputPlaceholder: "اكتب مشكلتك هنا...", sendBtn: "إرسال",
+    noTickets: "لا توجد تذاكر بعد", loading: "جاري البحث عن حل...",
+    followupNote: (m) => `سيتم الاتصال بك خلال ${m} دقائق للتأكد من حل المشكلة`,
+      followupDisabled: "المكالمات الهاتفية متوقفة في وضع العرض المحلي",
+    source: { kb: "قاعدة المعرفة", sql: "بيانات حسابك", "sql+kb": "بيانات الحساب + قاعدة المعرفة", web: "بحث إنترنت", "sql+web": "بيانات الحساب + بحث الإنترنت", clarify: "طلب توضيح", none: "بدون مصدر" },
+    confidence: "الثقة", sourceLabel: "المصدر",
+    close: "إغلاق", callResult: "نتيجة المكالمة", noCallYet: "لسه مفيش مكالمة تأكيد",
+    outcome: { resolved_confirmed: "تم تأكيد الحل ✓", escalated_to_agent: "تم تسجيل المشكلة لفريق الدعم", transferred_to_agent: "تم التحويل لموظف بشري" },
+    status: { open: "مفتوحة", resolved_by_rag: "حل أولي", resolved_confirmed: "تم التأكيد", escalated: "تم التصعيد" },
+    demoNote: "⚠ لا يوجد اتصال بالسيرفر الحقيقي — يعمل الآن بعرض تجريبي محاكى",
+    signupOffline: "تعذر الاتصال بالسيرفر؛ لم يتم إنشاء الحساب. حاول مرة أخرى.",
+    connErr: "حدث خطأ في الاتصال",
+    personaLabel: "الأسلوب", micTitle: "تسجيل صوتي", stopRecording: "إيقاف التسجيل",
+    recording: "🔴 جاري التسجيل... اضغط تاني للإرسال", transcribing: "جاري تحويل الصوت لنص...",
+    micUnsupported: "الميكروفون غير متاح على هذا المتصفح/الجهاز",
+    micDenied: "المتصفح منع إذن الميكروفون. اسمح به لهذا الموقع من إعدادات الموقع ثم أعد تحميل الصفحة.",
+    micNotFound: "لم يتم العثور على ميكروفون متصل بالجهاز.",
+    micBusy: "تعذر فتح الميكروفون؛ قد يكون مستخدمًا من تطبيق آخر.",
+    micFailed: "تعذر تشغيل الميكروفون. تحقق من إعدادات المتصفح والجهاز ثم حاول مرة أخرى.",
+    playFailed: "تعذر تحويل التسجيل الصوتي",
+    voiceNoSpeech: "لم ألتقط كلامًا واضحًا. حاول مرة أخرى أو اكتب مشكلتك.",
+    voiceRecognitionFailed: "تعذر التعرف على الكلام. حاول مرة أخرى أو اكتب مشكلتك.",
+    voiceDemoNote: "الرسائل الصوتية غير متاحة في العرض التجريبي",
+  },
+  en: {
+    title: "Customer Portal", subtitle: "Log in to track your issues",
+    loginTitle: "Log in", signupTitle: "Create account", signupHint: "Create your account to track your issues and tickets", loginHint: "Enter your username and password",
+    login: "Log in", signup: "Create account", showSignup: "New account", showLogin: "I already have an account",
+    usernamePh: "Username", passwordPh: "Password", namePh: "Name (optional)",
+    phonePh: "Mobile number (for the call) e.g. 201000000000",
+    badCreds: "Invalid username or password", usernameTaken: "Username already taken",
+    fillAll: "Please enter username and password",
+    fillSignup: "Username, password and phone number are required",
+    passwordTooShort: "Password must be at least 8 characters",
+    passwordTooLong: "Password must be no more than 128 characters",
+    usernameTooShort: "Username must be at least 3 characters",
+    invalidInput: "Check the entered details and try again",
+    tabChat: "New Problem", tabTickets: "My Tickets",
+    inputPlaceholder: "Type your problem here...", sendBtn: "Send",
+    noTickets: "No tickets yet", loading: "Searching for a solution...",
+    followupNote: (m) => `We'll call you in ${m} minutes to confirm the issue is resolved`,
+      followupDisabled: "Phone calls are disabled in the local demo",
+    source: { kb: "Knowledge base", sql: "Your account data", "sql+kb": "Account Data + KB", web: "Web search", "sql+web": "Account Data + Web Search", clarify: "Clarification request", none: "No source" },
+    confidence: "Confidence", sourceLabel: "Source",
+    close: "Close", callResult: "Call result", noCallYet: "No confirmation call yet",
+    outcome: { resolved_confirmed: "Resolution confirmed ✓", transferred_to_agent: "Transferred to an agent" },
+    status: { open: "Open", resolved_by_rag: "Initial answer", resolved_confirmed: "Confirmed", escalated: "Escalated" },
+    demoNote: "⚠ No live backend reachable — running in simulated demo mode",
+    signupOffline: "The server is unreachable; your account was not created. Please try again.",
+    connErr: "Connection error",
+    personaLabel: "Tone", micTitle: "Record voice message", stopRecording: "Stop recording",
+    recording: "🔴 Recording... tap again to send", transcribing: "Transcribing audio...",
+    micUnsupported: "Microphone not available on this browser/device",
+    micDenied: "The browser blocked microphone access. Allow it for this site in site settings, then reload.",
+    micNotFound: "No microphone was found on this device.",
+    micBusy: "Couldn't open the microphone; another app may be using it.",
+    micFailed: "Couldn't start the microphone. Check browser and device settings, then try again.",
+    playFailed: "Couldn't transcribe the recording",
+    voiceNoSpeech: "No clear speech was detected. Try again or type your issue.",
+    voiceRecognitionFailed: "Speech recognition failed. Try again or type your issue.",
+    voiceDemoNote: "Voice messages aren't available in demo mode",
+  },
+};
+let lang = "ar";
+function t(key) { return STRINGS[lang][key]; }
+
+// Escape anything that comes from the server/customers before putting it into innerHTML.
+function esc(v) {
+  return String(v ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
+
+function applyStaticText() {
+  document.getElementById("htmlRoot").lang = lang;
+  document.getElementById("htmlRoot").dir = lang === "ar" ? "rtl" : "ltr";
+  document.title = t("title");
+  document.getElementById("langBtn").textContent = lang === "ar" ? "EN" : "AR";
+  document.getElementById("t_title").textContent = t("title");
+  document.getElementById("t_subtitle").textContent = t("subtitle");
+  updateAuthTitle();
+  document.getElementById("loginBtn").textContent = t("login");
+  document.getElementById("signupBtn").textContent = t("signup");
+  document.getElementById("showSignupBtn").textContent = t("showSignup");
+  document.getElementById("showLoginBtn").textContent = t("showLogin");
+  document.getElementById("loginUsername").placeholder = t("usernamePh");
+  document.getElementById("loginPassword").placeholder = t("passwordPh");
+  document.getElementById("signupUsername").placeholder = t("usernamePh");
+  document.getElementById("signupPassword").placeholder = t("passwordPh");
+  document.getElementById("signupName").placeholder = t("namePh");
+  document.getElementById("signupPhone").placeholder = t("phonePh");
+  document.getElementById("t_tabChat").textContent = t("tabChat");
+  document.getElementById("t_tabTickets").textContent = t("tabTickets");
+  document.getElementById("input").placeholder = t("inputPlaceholder");
+  document.getElementById("send").textContent = t("sendBtn");
+  document.getElementById("t_personaLabel").textContent = t("personaLabel");
+  document.getElementById("micBtn").title = t("micTitle");
+}
+document.getElementById("langBtn").addEventListener("click", () => {
+  lang = lang === "ar" ? "en" : "ar";
+  applyStaticText();
+  loadPersonas();
+  if (document.getElementById("appScreen").style.display !== "none") loadTickets();
+});
+applyStaticText();
+
+// ---------------- State ----------------
+let token = null;
+let demoMode = false;   // لا وضع تجريبي: عند انقطاع السيرفر نعرض خطأ ولا نُظهر ردًا مُختلقًا
+let ticketId = null, pollTimer = null;
+
+// ---------------- Login / signup flow (username + password, no SMS) ----------------
+const loginErr = document.getElementById("loginError");
+
+var currentForm = "login";
+function updateAuthTitle() {
+  const su = currentForm === "signup";
+  document.getElementById("t_loginTitle").textContent = t(su ? "signupTitle" : "loginTitle");
+  document.getElementById("t_loginHint").textContent = t(su ? "signupHint" : "loginHint");
+}
+function showForm(which) {
+  currentForm = which;
+  updateAuthTitle();
+  document.getElementById("loginForm").style.display = which === "login" ? "block" : "none";
+  document.getElementById("signupForm").style.display = which === "signup" ? "block" : "none";
+  loginErr.textContent = "";
+}
+document.getElementById("showSignupBtn").addEventListener("click", () => showForm("signup"));
+document.getElementById("showLoginBtn").addEventListener("click", () => showForm("login"));
+
+// Shared by login + signup: POSTs credentials; on a real backend response
+// stores the token, and only falls back to demo mode if the backend is
+// genuinely unreachable (a 401/409 is a real answer, not a reason to demo).
+async function authRequest(path, body) {
+  let res;
+  try {
+    res = await fetch(`${API_BASE}/customer-auth/${path}`, {
+      method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body),
+    });
+  } catch {
+    loginErr.textContent = path === "signup" ? t("signupOffline") : t("connErr");
+    return;
+  }
+
+  if (res.status === 401) { loginErr.textContent = t("badCreds"); return; }
+  if (res.status === 409) { loginErr.textContent = t("usernameTaken"); return; }
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) {
+    if (typeof data.detail === "string") {
+      loginErr.textContent = data.detail;
+    } else if (Array.isArray(data.detail)) {
+      const fields = data.detail.map(issue => issue.loc?.at(-1));
+      if (fields.includes("password") && data.detail.some(issue => issue.type === "string_too_short" && issue.loc?.includes("password"))) {
+        loginErr.textContent = t("passwordTooShort");
+      } else if (fields.includes("username") && data.detail.some(issue => issue.type === "string_too_short" && issue.loc?.includes("username"))) {
+        loginErr.textContent = t("usernameTooShort");
+      } else {
+        loginErr.textContent = t("invalidInput");
+      }
+    } else {
+      loginErr.textContent = t("connErr");
+    }
+    return;
+  }
+  if (!data.access_token) { loginErr.textContent = t("connErr"); return; }
+
+  token = data.access_token;
+  demoMode = false;
+  enterApp();
+}
+
+document.getElementById("loginBtn").addEventListener("click", () => {
+  const username = document.getElementById("loginUsername").value.trim();
+  const password = document.getElementById("loginPassword").value;
+  loginErr.textContent = "";
+  if (!username || !password) { loginErr.textContent = t("fillAll"); return; }
+  authRequest("login", { username, password });
+});
+
+document.getElementById("signupBtn").addEventListener("click", () => {
+  const username = document.getElementById("signupUsername").value.trim();
+  const password = document.getElementById("signupPassword").value;
+  const name = document.getElementById("signupName").value.trim();
+  const phone = document.getElementById("signupPhone").value.trim();
+  loginErr.textContent = "";
+  if (!username || !password || !phone) { loginErr.textContent = t("fillSignup"); return; }
+  if (username.length < 3) { loginErr.textContent = t("usernameTooShort"); return; }
+  if (password.length < 8) { loginErr.textContent = t("passwordTooShort"); return; }
+  if (password.length > 128) { loginErr.textContent = t("passwordTooLong"); return; }
+  authRequest("signup", { username, password, phone, name: name || null });
+});
+
+function authHeaders() { return { "Authorization": `Bearer ${token}` }; }
+
+// Session expired / signed out: back to the login screen and clear everything that belongs to the customer.
+function doLogout() {
+  token = null; ticketId = null;
+  clearInterval(pollTimer);
+  closeModal();
+  messagesEl.innerHTML = ""; statusBar.innerHTML = ""; document.getElementById("ticketList").innerHTML = "";
+  document.getElementById("loginPassword").value = ""; document.getElementById("signupPassword").value = "";
+  document.getElementById("appScreen").style.display = "none";
+  document.getElementById("loginScreen").style.display = "";
+  showForm("login");
+}
+
+function enterApp() {
+  document.getElementById("loginScreen").style.display = "none";
+  document.getElementById("appScreen").style.display = "block";
+  loadTickets();
+  loadPersonas();
+}
+
+// ---------------- Tabs ----------------
+document.querySelectorAll(".tab-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".tab-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    const tab = btn.dataset.tab;
+    document.getElementById("chatTab").style.display = tab === "chat" ? "block" : "none";
+    document.getElementById("ticketsTab").style.display = tab === "tickets" ? "block" : "none";
+    if (tab === "tickets") loadTickets();
+  });
+});
+
+// ---------------- Chat (new problem) ----------------
+const messagesEl = document.getElementById("messages");
+const statusBar = document.getElementById("statusBar");
+const input = document.getElementById("input");
+const sendBtn = document.getElementById("send");
+const personaSelect = document.getElementById("personaSelect");
+
+// ---------------- Personas ----------------
+async function loadPersonas() {
+  let personas;
+  // GET /personas is a public endpoint (no auth needed), same call whether
+  // demoMode is on or not — it only falls back to the mock list if the
+  // backend genuinely isn't reachable.
+  try {
+    const res = await fetch(`${API_BASE}/personas`);
+    if (!res.ok) throw new Error("failed");
+    personas = await res.json();
+    if (!personas.length) throw new Error("empty");
+  } catch {
+    personaSelect.innerHTML = "";
+    return;
+  }
+  personaSelect.innerHTML = personas.map(p => {
+    return `<option value="${esc(p.id)}" ${p.is_default ? "selected" : ""}>${esc([p.name, p.role, p.description].filter(Boolean).join(" — "))}</option>`;
+  }).join("");
+}
+
+function selectedPersonaId() {
+  return personaSelect.value || undefined;
+}
+
+function addMessage(text, role, opts = {}) {
+  const div = document.createElement("div");
+  div.className = "msg " + role;
+  const span = document.createElement("span");
+  span.textContent = text;
+  div.appendChild(span);
+
+  // Agent replies get an on-demand playback button (TTS via /speech/tts),
+  // unless the caller already has audio in hand (opts.audioBase64, from a
+  // voice-message reply) in which case we play it immediately instead.
+  if (role === "agent" && text) {
+    if (opts.audioBase64) {
+      playAudioBase64(opts.audioBase64);
+    } else {
+      const playBtn = document.createElement("button");
+      playBtn.className = "play-btn";
+      playBtn.type = "button";
+      playBtn.textContent = "🔊";
+      playBtn.title = t("micTitle");
+      playBtn.addEventListener("click", () => playText(text, playBtn));
+      div.appendChild(playBtn);
+    }
+  }
+
+  messagesEl.appendChild(div);
+  messagesEl.scrollTop = messagesEl.scrollHeight;
+}
+
+function playAudioBase64(base64) {
+  try {
+    const audio = new Audio(`data:audio/wav;base64,${base64}`);
+    audio.play();
+  } catch { /* autoplay can be blocked by the browser — not fatal, the customer already has the text */ }
+}
+
+async function playText(text, btnEl) {
+  if (demoMode) { alert(t("voiceDemoNote")); return; }
+  const original = btnEl.textContent;
+  btnEl.textContent = "…";
+  btnEl.disabled = true;
+  try {
+    const res = await fetch(`${API_BASE}/speech/tts`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...authHeaders() },
+      body: JSON.stringify({ text }),
+    });
+    if (!res.ok) throw new Error("tts failed");
+    const data = await res.json();
+    playAudioBase64(data.audio_base64);
+  } catch {
+    alert(t("playFailed"));
+  } finally {
+    btnEl.textContent = original;
+    btnEl.disabled = false;
+  }
+}
+
+async function sendProblem(text) {
+  addMessage(text, "customer");
+  input.value = "";
+  sendBtn.disabled = true;
+  statusBar.innerHTML = `<span>${t("loading")}</span>`;
+  clearInterval(pollTimer);
+
+  let data;
+  {
+    let res;
+    try {
+      res = await fetch(`${API_BASE}/tickets/message`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", ...authHeaders() },
+        body: JSON.stringify({ problem_text: text, persona_id: selectedPersonaId() }),
+      });
+    } catch {
+      // fetch() itself threw: no connection reached the server at all (offline, DNS, CORS-blocked).
+      // This is the only case that falls back to the demo answer — a real server response,
+      // even an error one, must never be silently replaced by a fabricated confident answer.
+      addMessage(t("connErr"), "system");
+      statusBar.innerHTML = "";
+      sendBtn.disabled = false;
+      return;
+    }
+    if (res) {
+      if (res.status === 401) { sendBtn.disabled = false; doLogout(); return; }
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        addMessage(typeof err.detail === "string" ? err.detail : t("connErr"), "system");
+        statusBar.innerHTML = "";
+        sendBtn.disabled = false;
+        return;
+      }
+      data = await res.json();
+    }
+  }
+
+  ticketId = data.ticket_id;
+  addMessage(data.answer || "—", "agent");
+  const sourceLabel = t("source")[data.source] || data.source;
+  statusBar.innerHTML = `
+    <span class="pill">${t("sourceLabel")}: ${esc(sourceLabel)}</span>
+    <span class="pill">${t("confidence")}: ${Math.round((data.confidence || 0) * 100)}%</span>
+    <span class="pill" id="callPill">…</span>`;
+  addMessage(data.followup_call_in_seconds == null
+    ? t("followupDisabled")
+    : t("followupNote")(Math.round(data.followup_call_in_seconds / 60)), "system");
+
+  sendBtn.disabled = false;
+  startPolling();
+}
+
+function startPolling() {
+  let tick = 0;
+  pollTimer = setInterval(async () => {
+    let status;
+    if (demoMode) {
+      tick += 1;
+      status = tick < 2 ? { latest_call: { status: "in_progress", outcome: null } }
+                        : { latest_call: { status: "completed", outcome: "resolved_confirmed" } };
+    } else {
+      try {
+        const res = await fetch(`${API_BASE}/tickets/${ticketId}/status`, { headers: authHeaders() });
+        if (res.status === 401) { clearInterval(pollTimer); return; }
+        if (!res.ok) return;
+        status = await res.json();
+      } catch { return; }
+    }
+    const pill = document.getElementById("callPill");
+    const call = status.latest_call;
+    if (!call || !pill) return;
+    if (call.status === "in_progress") pill.textContent = "…";
+    if (call.status === "completed" && call.outcome) {
+      pill.textContent = t("outcome")[call.outcome] || call.outcome;
+      addMessage(t("outcome")[call.outcome] || call.outcome, "system");
+      clearInterval(pollTimer);
+    }
+  }, demoMode ? 2500 : 5000);
+}
+
+sendBtn.addEventListener("click", () => { const v = input.value.trim(); if (v) sendProblem(v); });
+input.addEventListener("keydown", (e) => { if (e.key === "Enter") { const v = input.value.trim(); if (v) sendProblem(v); } });
+
+// ---------------- Voice recording (mic button) ----------------
+const micBtn = document.getElementById("micBtn");
+const micStatusEl = document.getElementById("micStatus");
+let mediaRecorder = null, recordedChunks = [], isRecording = false;
+// الصوت يُرسل دائمًا إلى السيرفر (faster-whisper محلي). لا نستخدم Web Speech API لأن Chrome يرسل الصوت لخدمة سحابية.
+micBtn.addEventListener("click", async () => {
+  if (isRecording) {
+    if (mediaRecorder?.state === "recording") mediaRecorder.stop();
+    return;
+  }
+  if (demoMode) { alert(t("voiceDemoNote")); return; }
+  if (!navigator.mediaDevices || !window.MediaRecorder) {
+    micStatusEl.textContent = t("micUnsupported");
+    return;
+  }
+
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    recordedChunks = [];
+    mediaRecorder = new MediaRecorder(stream);
+    mediaRecorder.ondataavailable = (e) => { if (e.data.size > 0) recordedChunks.push(e.data); };
+    mediaRecorder.onstop = () => {
+      stream.getTracks().forEach(tr => tr.stop()); // release the mic
+      isRecording = false;
+      micBtn.classList.remove("recording");
+      const blob = new Blob(recordedChunks, { type: mediaRecorder.mimeType || "audio/webm" });
+      if (blob.size > 0) sendVoiceMessage(blob);
+      else micStatusEl.textContent = "";
+    };
+    mediaRecorder.start();
+    isRecording = true;
+    micBtn.classList.add("recording");
+    micStatusEl.textContent = t("recording");
+  } catch (error) {
+    console.warn("microphone request failed:", error?.name || "unknown");
+    const reason = error?.name === "NotAllowedError" || error?.name === "SecurityError"
+      ? "micDenied"
+      : error?.name === "NotFoundError"
+        ? "micNotFound"
+        : error?.name === "NotReadableError"
+          ? "micBusy"
+          : "micFailed";
+    micStatusEl.textContent = t(reason);
+  }
+});
+
+async function sendVoiceMessage(blob) {
+  micStatusEl.textContent = t("transcribing");
+  sendBtn.disabled = true;
+  micBtn.disabled = true;
+  clearInterval(pollTimer);
+
+  const form = new FormData();
+  form.append("audio", blob, "voice-message.webm");
+  if (selectedPersonaId()) form.append("persona_id", selectedPersonaId());
+  form.append("want_audio_reply", "true");
+
+  let data;
+  try {
+    const res = await fetch(`${API_BASE}/tickets/message/voice`, {
+      method: "POST",
+      headers: authHeaders(), // no Content-Type — the browser sets the multipart boundary
+      body: form,
+    });
+    if (!res.ok) {
+      const errorBody = await res.json().catch(() => ({}));
+      throw new Error(errorBody.detail || t("playFailed"));
+    }
+    data = await res.json();
+  } catch (error) {
+    micStatusEl.textContent = error.message === "Failed to fetch" ? t("connErr") : error.message || t("playFailed");
+    sendBtn.disabled = false;
+    micBtn.disabled = false;
+    return;
+  }
+
+  micStatusEl.textContent = "";
+  sendBtn.disabled = false;
+  micBtn.disabled = false;
+
+  addMessage(data.transcribed_text || "…", "customer");
+  ticketId = data.ticket_id;
+  addMessage(data.answer || "—", "agent", { audioBase64: data.answer_audio_base64 });
+  const sourceLabel = t("source")[data.source] || data.source;
+  statusBar.innerHTML = `
+    <span class="pill">${t("sourceLabel")}: ${esc(sourceLabel)}</span>
+    <span class="pill">${t("confidence")}: ${Math.round((data.confidence || 0) * 100)}%</span>
+    <span class="pill" id="callPill">…</span>`;
+  addMessage(data.followup_call_in_seconds == null
+    ? t("followupDisabled")
+    : t("followupNote")(Math.round(data.followup_call_in_seconds / 60)), "system");
+  startPolling();
+}
+
+// ---------------- Tickets tab ----------------
+const MOCK_TICKETS = [];
+
+async function loadTickets() {
+  let tickets;
+  if (demoMode) { tickets = MOCK_TICKETS; }
+  else {
+    try {
+      const res = await fetch(`${API_BASE}/customer-auth/my/tickets`, { headers: authHeaders() });
+      if (res.status === 401) { doLogout(); return; }
+      tickets = res.ok ? await res.json() : MOCK_TICKETS;
+    } catch { tickets = MOCK_TICKETS; }
+  }
+  renderTickets(tickets);
+}
+
+function renderTickets(tickets) {
+  const el = document.getElementById("ticketList");
+  if (!tickets.length) { el.innerHTML = `<div class="empty-note">${t("noTickets")}</div>`; return; }
+  el.innerHTML = tickets.map(tk => `
+    <div class="ticket-row" onclick="openTicketDetail('${esc(tk.id)}')">
+      <div class="top">
+        <span>${esc(tk.id.slice(0, 8))}</span>
+        <span class="badge ${esc(tk.status)}">${esc(t("status")[tk.status] || tk.status)}</span>
+      </div>
+      <div class="date">${new Date(tk.opened_at).toLocaleString(lang === "ar" ? "ar-EG" : "en-US")}</div>
+    </div>`).join("");
+}
+
+async function openTicketDetail(id) {
+  let detail;
+  if (demoMode) {
+    detail = {
+      ticket: MOCK_TICKETS.find(t => t.id === id),
+      messages: [
+        { sender: "customer", content: lang === "ar" ? "اتخصم مني فلوس زيادة" : "I was charged more than expected." },
+        { sender: "agent", content: lang === "ar" ? "راجع تفاصيل الفاتورة من التطبيق." : "Check your bill details in the app." },
+        { sender: "system", content: t("outcome").resolved_confirmed },
+      ],
+      calls: [{ status: "completed", outcome: "resolved_confirmed", duration_seconds: 40 }],
+    };
+  } else {
+    try {
+      const res = await fetch(`${API_BASE}/customer-auth/my/tickets/${encodeURIComponent(id)}`, { headers: authHeaders() });
+      if (res.status === 401) { doLogout(); return; }
+      if (!res.ok) return;
+      detail = await res.json();
+    } catch { return; }
+  }
+
+  const msgs = detail.messages.map(m => `<div class="msg ${m.sender === "customer" ? "customer" : m.sender === "system" ? "system" : "agent"}" style="max-width:100%">${esc(m.content)}</div>`).join("");
+  const call = detail.calls[detail.calls.length - 1];
+  const callHtml = call
+    ? `<div class="call-outcome ${['transferred_to_agent','escalated_to_agent'].includes(call.outcome) ? 'escalated' : ''}"><b>${t("callResult")}:</b> ${esc(t("outcome")[call.outcome] || call.status)}</div>`
+    : `<div class="call-outcome">${t("noCallYet")}</div>`;
+
+  showModal(`
+    <button class="close-btn" onclick="closeModal()">${t("close")}</button>
+    <h3>${esc(id.slice(0, 8))}</h3>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-top:14px">${msgs}</div>
+    ${callHtml}
+  `);
+}
+
+function showModal(html) {
+  closeModal();
+  const overlay = document.createElement("div");
+  overlay.className = "modal-overlay"; overlay.id = "modalOverlay";
+  overlay.innerHTML = `<div class="modal">${html}</div>`;
+  overlay.addEventListener("click", e => { if (e.target === overlay) closeModal(); });
+  document.body.appendChild(overlay);
+}
+function closeModal() { document.getElementById("modalOverlay")?.remove(); }
+</script>
+</body>
+</html>

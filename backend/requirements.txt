@@ -1,0 +1,9 @@
+fastapi>=0.110,<1.0
+uvicorn[standard]>=0.27
+sqlalchemy>=2.0,<3.0
+pydantic>=2.5,<3.0
+PyJWT[crypto]>=2.8
+httpx>=0.26
+python-multipart>=0.0.9
+pypdf>=4.0
+python-docx>=1.1
