@@ -290,10 +290,10 @@ python run.py
 
 | Service | URL |
 |---|---|
-| Customer Portal | http://127.0.0.1:8000/ |
-| Admin Dashboard | http://127.0.0.1:8000/admin |
-| API Documentation | http://127.0.0.1:8000/docs |
-| Health Check | http://127.0.0.1:8000/health |
+| Customer Portal | http://127.0.0.1:8001/ |
+| Admin Dashboard | http://127.0.0.1:8001/admin |
+| API Documentation | http://127.0.0.1:8001/docs |
+| Health Check | http://127.0.0.1:8001/health |
 
 On the first run, a `superadmin` account is created. If `SUPERADMIN_PASSWORD` is not configured, the application prints a randomly generated password to the console.
 
